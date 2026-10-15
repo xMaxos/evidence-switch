@@ -1,11 +1,14 @@
 """Optional, sequential runner for OpenAI-compatible chat endpoints."""
 
 import ipaddress
+from contextlib import ExitStack
+import hashlib
 import json
 import math
 import os
 from pathlib import Path
 import re
+import time
 from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
@@ -132,35 +135,94 @@ def _complete(opener, endpoint, model, messages, key, timeout):
         raise RuntimeError("Model request failed or returned an invalid response") from None
 
 
-def run_prompts(prompts_path, output_path, *, base_url, model, api_key_env=None, limit=None, timeout=60.0):
-    """Run validated prompt-only JSONL and return the number of saved predictions.
-
-    Existing outputs are never overwritten. Completed lines are flushed after
-    every request and retained if a later request fails. No retries or redirects.
-    Validation errors raise ValueError; endpoint errors raise RuntimeError.
-    """
-    endpoint = _endpoint(base_url)
+def _prepare_run(prompts_path, output_path, model, limit, timeout, strategy, trace_path):
     if not isinstance(model, str) or not model.strip():
         raise ValueError("Model must be a nonempty string")
     if limit is not None and (type(limit) is not int or limit <= 0):
         raise ValueError("Limit must be a positive integer")
     if isinstance(timeout, bool) or not isinstance(timeout, (int, float)) or not math.isfinite(timeout) or timeout <= 0:
         raise ValueError("Timeout must be a positive finite number")
-    prompts_path = Path(prompts_path)
-    output_path = Path(output_path)
-    if prompts_path.resolve() == output_path.resolve():
-        raise ValueError("Input and output paths must differ")
-    if output_path.exists():
-        raise FileExistsError("Prediction output already exists")
-    prompts = _read_prompts(prompts_path)
+    if strategy not in ("direct", "two-stage"):
+        raise ValueError("Strategy must be direct or two-stage")
+    paths = [Path(prompts_path), Path(output_path)]
+    if trace_path is not None:
+        paths.append(Path(trace_path))
+    if len({path.resolve() for path in paths}) != len(paths):
+        raise ValueError("Input, prediction and trace paths must differ")
+    if any(path.exists() for path in paths[1:]):
+        raise FileExistsError("Prediction or trace output already exists")
+    prompts = _read_prompts(paths[0])
+    if strategy == "two-stage":
+        from .workflow import prepare
+        # Validate every template before requests, including entries beyond limit.
+        prepared = [prepare(prompt["messages"]) for prompt in prompts]
+    else:
+        prepared = [None] * len(prompts)
+    return list(zip(prompts[:limit], prepared[:limit]))
+
+
+def _messages_digest(messages):
+    return hashlib.sha256(json.dumps(messages, ensure_ascii=False,
+                                    sort_keys=True).encode("utf-8")).hexdigest()
+
+
+def _execute(rows, output_path, complete, strategy, trace_path=None, environment=None):
+    """Shared sequential workflow; complete returns (raw content, call metadata)."""
+    count = 0
+    with ExitStack() as stack:
+        output = stack.enter_context(Path(output_path).open("x", encoding="utf-8", newline="\n"))
+        trace_file = (stack.enter_context(Path(trace_path).open("x", encoding="utf-8", newline="\n"))
+                      if trace_path is not None else None)
+        for prompt, prepared in rows:
+            start = time.perf_counter()
+            trace = {"id": prompt["id"], "strategy": strategy, "calls": [],
+                     "original_messages_sha256": _messages_digest(prompt["messages"])}
+
+            def call(messages):
+                called = time.perf_counter()
+                content, metadata = complete(messages)
+                trace["calls"].append(dict(metadata, messages_sha256=_messages_digest(messages),
+                                           wall_seconds=time.perf_counter() - called))
+                return content
+
+            if prepared is None:
+                content = call(prompt["messages"])
+            else:
+                extraction = call(prepared.extraction_messages)
+                trace.update(extraction_response=extraction, extraction_valid=False)
+                try:
+                    final_messages = prepared.finish(extraction)
+                except (ValueError, RecursionError):
+                    # An invalid extraction is a scored failure, never repaired or retried.
+                    content = {"error": "invalid_extraction"}
+                else:
+                    trace["extraction_valid"] = True
+                    content = call(final_messages)
+            output.write(json.dumps({"id": prompt["id"], "response": content}, ensure_ascii=False) + "\n")
+            output.flush()
+            if trace_file is not None:
+                trace["wall_seconds"] = time.perf_counter() - start
+                if environment is not None:
+                    trace["environment"] = environment
+                trace_file.write(json.dumps(trace, ensure_ascii=False) + "\n")
+                trace_file.flush()
+            count += 1
+    return count
+
+
+def run_prompts(prompts_path, output_path, *, base_url, model, api_key_env=None, limit=None,
+                timeout=60.0, strategy="direct", trace_path=None):
+    """Send prompt-only JSONL. No overwrite, retries, redirects or implicit proxies.
+
+    Completed predictions survive later request failures. Two-stage mode supports
+    generated EvidenceSwitch prompts only; its extraction is validated before a
+    second call with the same model. Endpoint use may incur provider charges.
+    """
+    endpoint = _endpoint(base_url)
+    rows = _prepare_run(prompts_path, output_path, model, limit, timeout, strategy, trace_path)
     key = _api_key(api_key_env)
     # Ignore environment proxies; never send credentials through an implicit proxy.
     opener = build_opener(ProxyHandler({}), _NoRedirects())
-    count = 0
-    with output_path.open("x", encoding="utf-8", newline="\n") as output:
-        for prompt in prompts[:limit]:
-            content = _complete(opener, endpoint, model, prompt["messages"], key, timeout)
-            output.write(json.dumps({"id": prompt["id"], "response": content}, ensure_ascii=False) + "\n")
-            output.flush()
-            count += 1
-    return count
+    def complete(messages):
+        return _complete(opener, endpoint, model, messages, key, timeout), {"model": model}
+    return _execute(rows, output_path, complete, strategy, trace_path)

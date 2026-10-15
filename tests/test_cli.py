@@ -3,6 +3,7 @@ import io
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from evidenceswitch.cli import main
 from evidenceswitch.io import read_jsonl
@@ -50,6 +51,20 @@ class CliTests(unittest.TestCase):
             self.assertEqual((out / "cases.jsonl").read_bytes(), original)
             self.assertEqual(self.invoke("score", "--cases", out / "cases.jsonl", "--responses", "unused",
                                          "--min-pair-accuracy", "nan"), 2)
+
+    def test_two_stage_runner_options_reach_both_transports(self):
+        with patch("evidenceswitch.ollama.run_ollama", return_value=6) as local:
+            self.assertEqual(self.invoke("run-ollama", "--prompts", "prompts.jsonl", "--out", "out.jsonl",
+                                         "--model", "local-model", "--strategy", "two-stage", "--trace", "trace.jsonl"), 0)
+        self.assertEqual(local.call_args.kwargs["strategy"], "two-stage")
+        self.assertEqual(local.call_args.kwargs["trace_path"], "trace.jsonl")
+        self.assertEqual(local.call_args.kwargs["num_predict"], 512)
+        with patch("evidenceswitch.runner.run_prompts", return_value=6) as compatible:
+            self.assertEqual(self.invoke("run", "--prompts", "prompts.jsonl", "--out", "out.jsonl",
+                                         "--model", "model", "--base-url", "http://localhost:8000/v1",
+                                         "--strategy", "two-stage", "--trace", "trace.jsonl"), 0)
+        self.assertEqual(compatible.call_args.kwargs["strategy"], "two-stage")
+        self.assertEqual(compatible.call_args.kwargs["trace_path"], "trace.jsonl")
 
 
 if __name__ == "__main__":

@@ -51,6 +51,20 @@ def _parser():
     run.add_argument("--api-key-env", help="Name of environment variable containing endpoint API key")
     run.add_argument("--limit", type=int)
     run.add_argument("--timeout", type=float, default=60.0)
+    run.add_argument("--strategy", choices=("direct", "two-stage"), default="direct")
+    run.add_argument("--trace", help="New JSONL file for extraction responses and request metadata")
+    local = commands.add_parser("run-ollama", help="Use an installed local Ollama model (no paid API or downloads)")
+    local.add_argument("--prompts", required=True)
+    local.add_argument("--out", required=True)
+    local.add_argument("--model", required=True)
+    local.add_argument("--base-url", default="http://127.0.0.1:11434", help="Local loopback origin only")
+    local.add_argument("--strategy", choices=("direct", "two-stage"), default="direct")
+    local.add_argument("--trace", help="New JSONL file for extraction responses, timing, tokens and settings")
+    local.add_argument("--limit", type=int)
+    local.add_argument("--timeout", type=float, default=180.0)
+    local.add_argument("--seed", type=int, default=20261015)
+    local.add_argument("--num-ctx", type=int, default=4096)
+    local.add_argument("--num-predict", type=int, default=512, help="Maximum output tokens per model call")
     return parser
 
 
@@ -75,7 +89,15 @@ def main(argv=None):
         elif args.command == "run":
             from .runner import run_prompts
             count = run_prompts(args.prompts, args.out, base_url=args.base_url, model=args.model,
-                                api_key_env=args.api_key_env, limit=args.limit, timeout=args.timeout)
+                                api_key_env=args.api_key_env, limit=args.limit, timeout=args.timeout,
+                                strategy=args.strategy, trace_path=args.trace)
+            print(f"Saved {count} responses to {args.out}")
+        elif args.command == "run-ollama":
+            from .ollama import run_ollama
+            count = run_ollama(args.prompts, args.out, base_url=args.base_url, model=args.model,
+                               strategy=args.strategy, trace_path=args.trace, limit=args.limit,
+                               timeout=args.timeout, seed=args.seed, num_ctx=args.num_ctx,
+                               num_predict=args.num_predict)
             print(f"Saved {count} responses to {args.out}")
         else:
             if args.command == "score":

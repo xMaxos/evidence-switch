@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-15",
+  "version": "0.2.0",
+  "cases": "examples/mini/cases.jsonl",
+  "purpose": "Check the packaged CLI on six existing English fixtures, not a new efficacy test.",
+  "api_fees_eur": 0,
+  "conditions": {
+    "direct": {
+      "cases": 6,
+      "calls": 6,
+      "all_stopped": true,
+      "thinking_returned": false,
+      "median_wall_seconds": 0.9825843500439078,
+      "generated_tokens": 265,
+      "environment": {
+        "provider": "ollama",
+        "model": "qwen3.5:9b",
+        "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "ollama_version": "0.35.0",
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 20261015,
+          "num_ctx": 4096,
+          "num_predict": 512
+        }
+      }
+    },
+    "two-stage": {
+      "cases": 6,
+      "calls": 12,
+      "all_stopped": true,
+      "thinking_returned": false,
+      "median_wall_seconds": 3.3075592999812216,
+      "generated_tokens": 876,
+      "environment": {
+        "provider": "ollama",
+        "model": "qwen3.5:9b",
+        "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "ollama_version": "0.35.0",
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 20261015,
+          "num_ctx": 4096,
+          "num_predict": 512
+        }
+      }
+    }
+  }
+}

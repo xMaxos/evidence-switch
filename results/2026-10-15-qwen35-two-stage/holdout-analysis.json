@@ -1,0 +1,83 @@
+{
+  "phase": "holdout",
+  "comparison": {
+    "schema_version": 1,
+    "baseline": {
+      "cases": 54,
+      "pairs": 27,
+      "responses": 54,
+      "coverage": 1.0,
+      "format_accuracy": 1.0,
+      "answer_accuracy": 0.9259259259259259,
+      "citation_accuracy": 0.9259259259259259,
+      "strict_accuracy": 0.9259259259259259,
+      "pair_accuracy": 0.8518518518518519,
+      "abstention_accuracy": 1.0,
+      "false_abstention_rate": 0.0
+    },
+    "candidate": {
+      "cases": 54,
+      "pairs": 27,
+      "responses": 54,
+      "coverage": 1.0,
+      "format_accuracy": 1.0,
+      "answer_accuracy": 1.0,
+      "citation_accuracy": 1.0,
+      "strict_accuracy": 1.0,
+      "pair_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "false_abstention_rate": 0.0
+    },
+    "fixed_ids": [
+      "fbfe3375304c",
+      "356623fe9185",
+      "25a4147bc33e",
+      "8e0d4d013c59"
+    ],
+    "regressed_ids": []
+  },
+  "pair_transitions": {
+    "both_correct": 23,
+    "two_stage_only_correct": 4,
+    "baseline_only_correct": 0,
+    "both_incorrect": 0
+  },
+  "pair_exact_mcnemar_two_sided_p": 0.125,
+  "runtime": {
+    "baseline": {
+      "cases": 54,
+      "requests": 54,
+      "all_done": true,
+      "stop_reasons": {
+        "stop": 54
+      },
+      "total_wall_seconds": 52.36040139943361,
+      "median_wall_seconds": 1.104923699866049,
+      "median_inference_seconds_excluding_load": 1.09294735,
+      "generated_tokens": 2047,
+      "max_generated_tokens_per_call": 51,
+      "prompt_tokens": 44763,
+      "max_prompt_tokens_per_call": 862,
+      "thinking_returned_count": 0
+    },
+    "candidate": {
+      "cases": 54,
+      "requests": 108,
+      "all_done": true,
+      "stop_reasons": {
+        "stop": 108
+      },
+      "total_wall_seconds": 163.53197060036473,
+      "median_wall_seconds": 3.284729150007479,
+      "median_inference_seconds_excluding_load": 3.26012375,
+      "generated_tokens": 7758,
+      "max_generated_tokens_per_call": 239,
+      "prompt_tokens": 61035,
+      "max_prompt_tokens_per_call": 864,
+      "thinking_returned_count": 0
+    }
+  },
+  "gold_independently_verified": 54,
+  "identical_messages_verified": true,
+  "api_fees_eur": 0
+}

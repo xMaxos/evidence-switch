@@ -1,0 +1,65 @@
+{
+  "comparison": {
+    "schema_version": 1,
+    "baseline": {
+      "cases": 54,
+      "pairs": 27,
+      "responses": 54,
+      "coverage": 1.0,
+      "format_accuracy": 1.0,
+      "answer_accuracy": 0.7777777777777778,
+      "citation_accuracy": 0.7777777777777778,
+      "strict_accuracy": 0.7777777777777778,
+      "pair_accuracy": 0.5925925925925926,
+      "abstention_accuracy": 1.0,
+      "false_abstention_rate": 0.0
+    },
+    "candidate": {
+      "cases": 54,
+      "pairs": 27,
+      "responses": 54,
+      "coverage": 1.0,
+      "format_accuracy": 1.0,
+      "answer_accuracy": 0.7222222222222222,
+      "citation_accuracy": 0.7222222222222222,
+      "strict_accuracy": 0.7222222222222222,
+      "pair_accuracy": 0.5185185185185185,
+      "abstention_accuracy": 1.0,
+      "false_abstention_rate": 0.0
+    },
+    "fixed_ids": [],
+    "regressed_ids": [
+      "2a0cc7fccd76",
+      "be3e1e347d0f",
+      "073eb26df75e"
+    ]
+  },
+  "fixed_pairs": [],
+  "regressed_pairs": [
+    "913f25c9a142",
+    "b02312f1b399"
+  ],
+  "pair_mcnemar_exact_two_sided_p": 0.5,
+  "runtime": {
+    "baseline": {
+      "requests": 54,
+      "total_seconds": 51.97687579947524,
+      "median_seconds": 1.082182649988681,
+      "prompt_tokens": 44811,
+      "output_tokens": 2111,
+      "truncated_responses": 0,
+      "thinking_responses": 0
+    },
+    "candidate": {
+      "requests": 54,
+      "total_seconds": 53.22905799886212,
+      "median_seconds": 1.0853495999472216,
+      "prompt_tokens": 50697,
+      "output_tokens": 2055,
+      "truncated_responses": 0,
+      "thinking_responses": 0
+    }
+  },
+  "api_fees_eur": 0,
+  "sample_limit": "One model, one fixed holdout seed, 27 paired synthetic tasks. No general intelligence or training claim."
+}

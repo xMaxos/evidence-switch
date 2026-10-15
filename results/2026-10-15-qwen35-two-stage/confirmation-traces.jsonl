@@ -1,0 +1,36 @@
+{"extraction_response": "{\"records\":[{\"source_id\":\"284611117f26\",\"entity\":\"Nuvora-fd9625a76d64\",\"field\":\"archive_label\",\"revision\":3930,\"value\":\"V-73a9afc2631f\"},{\"source_id\":\"ea3840ef7e46\",\"entity\":\"Nuvora-fd9625a76d64\",\"field\":\"archive_label\",\"revision\":3789,\"value\":\"V-76a4609f2b65\"}]}", "extraction_valid": true, "id": "2cdd1d59f872", "condition": "candidate"}
+{"id": "2cdd1d59f872", "condition": "baseline"}
+{"id": "4222c01623af", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"c585e04a1be2\",\"entity\":\"Nuvora-6f05ea829710\",\"field\":\"beacon_key\",\"revision\":9,\"value\":\"V-09baf0784909\"},{\"source_id\":\"4a46e90a68e8\",\"entity\":\"Nuvora-6f05ea829710\",\"field\":\"beacon_key\",\"revision\":11,\"value\":\"V-b0479773194b\"}]}", "extraction_valid": true, "id": "4222c01623af", "condition": "candidate"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"2d9413003e56\",\"entity\":\"Nuvora-6f27aa90a8b1\",\"field\":\"signal_code\",\"revision\":98,\"value\":\"V-0042936a31df\"},{\"source_id\":\"1c08fcad0143\",\"entity\":\"Nuvora-6f27aa90a8b1\",\"field\":\"signal_code\",\"revision\":118,\"value\":\"V-fc031421fc4d\"}]}", "extraction_valid": true, "id": "36a4c84cd0d1", "condition": "candidate"}
+{"id": "36a4c84cd0d1", "condition": "baseline"}
+{"id": "ba062099f01c", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"642477dd5a54\",\"entity\":\"Nuvora-0e5a0560714c\",\"field\":\"signal_code\",\"revision\":4697,\"value\":\"V-51c9b474fa22\"},{\"source_id\":\"3f8f60242c20\",\"entity\":\"Nuvora-0e5a0560714c\",\"field\":\"signal_code\",\"revision\":5303,\"value\":\"V-75fb8f675abc\"}]}", "extraction_valid": true, "id": "ba062099f01c", "condition": "candidate"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"9fd055351915\",\"entity\":\"Nuvora-feceb205820e\",\"field\":\"archive_label\",\"revision\":1205,\"value\":\"V-c816827921f1\"},{\"source_id\":\"7ce80f4d8641\",\"entity\":\"Nuvora-feceb205820e\",\"field\":\"archive_label\",\"revision\":878,\"value\":\"V-499c115f7d8f\"}]}", "extraction_valid": true, "id": "090e46d21849", "condition": "candidate"}
+{"id": "090e46d21849", "condition": "baseline"}
+{"id": "605e68666c7b", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"53220c6ed4f0\",\"entity\":\"Nuvora-6f06839ec083\",\"field\":\"route_token\",\"revision\":9004,\"value\":\"V-7b5231da1849\"},{\"source_id\":\"8722706617c3\",\"entity\":\"Nuvora-6f06839ec083\",\"field\":\"route_token\",\"revision\":8043,\"value\":\"V-42a52ec00f06\"}]}", "extraction_valid": true, "id": "605e68666c7b", "condition": "candidate"}
+{"extraction_response": "{\"records\":[]}", "extraction_valid": true, "id": "ce0de3e41a48", "condition": "candidate"}
+{"id": "ce0de3e41a48", "condition": "baseline"}
+{"id": "d63a1fce8859", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"e6de95dd14a4\",\"entity\":\"Nuvora-755b22ca7dde\",\"field\":\"beacon_key\",\"revision\":8433,\"value\":\"V-fad13fb123e4\"},{\"source_id\":\"98d5b8e8590f\",\"entity\":\"Nuvora-755b22ca7dde\",\"field\":\"beacon_key\",\"revision\":8376,\"value\":\"V-176332e169b2\"}]}", "extraction_valid": true, "id": "d63a1fce8859", "condition": "candidate"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"53220c6ed4f0\",\"entity\":\"Nuvora-6f06839ec083\",\"field\":\"route_token\",\"revision\":8994,\"value\":\"V-d583c867af66\"},{\"source_id\":\"8722706617c3\",\"entity\":\"Nuvora-6f06839ec083\",\"field\":\"route_token\",\"revision\":8043,\"value\":\"V-42a52ec00f06\"}]}", "extraction_valid": true, "id": "0df51f65fd1c", "condition": "candidate"}
+{"id": "0df51f65fd1c", "condition": "baseline"}
+{"id": "8f2aeebb1b13", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"4a46e90a68e8\",\"entity\":\"Nuvora-6f05ea829710\",\"field\":\"beacon_key\",\"revision\":11,\"value\":\"V-b0479773194b\"},{\"source_id\":\"c585e04a1be2\",\"entity\":\"Nuvora-6f05ea829710\",\"field\":\"beacon_key\",\"revision\":9,\"value\":\"V-09baf0784909\"}]}", "extraction_valid": true, "id": "8f2aeebb1b13", "condition": "candidate"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"7ce80f4d8641\",\"entity\":\"Nuvora-feceb205820e\",\"field\":\"archive_label\",\"revision\":878,\"value\":\"V-499c115f7d8f\"},{\"source_id\":\"9fd055351915\",\"entity\":\"Nuvora-feceb205820e\",\"field\":\"archive_label\",\"revision\":1205,\"value\":\"V-c816827921f1\"}]}", "extraction_valid": true, "id": "cde0b33a4ba1", "condition": "candidate"}
+{"id": "cde0b33a4ba1", "condition": "baseline"}
+{"id": "e3f50cf95fb1", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"09b702f2ff0b\",\"entity\":\"Nuvora-d2c94e2f7f1f\",\"field\":\"signal_code\",\"revision\":4106,\"value\":\"V-d807b6dc04cb\"},{\"source_id\":\"95e59cd14f77\",\"entity\":\"Nuvora-d2c94e2f7f1f\",\"field\":\"signal_code\",\"revision\":3688,\"value\":\"V-ea8126532ff7\"}]}", "extraction_valid": true, "id": "e3f50cf95fb1", "condition": "candidate"}
+{"extraction_response": "{\"records\":[]}", "extraction_valid": true, "id": "4dfdd1ee3a03", "condition": "candidate"}
+{"id": "4dfdd1ee3a03", "condition": "baseline"}
+{"id": "e81ad333f59a", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"f471aef39605\",\"entity\":\"Nuvora-d903b622cb5a\",\"field\":\"beacon_key\",\"revision\":1006,\"value\":\"V-3d4ebea044a9\"},{\"source_id\":\"1f56914321a7\",\"entity\":\"Nuvora-d903b622cb5a\",\"field\":\"beacon_key\",\"revision\":997,\"value\":\"V-17fb9b114bef\"}]}", "extraction_valid": true, "id": "e81ad333f59a", "condition": "candidate"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"1c08fcad0143\",\"entity\":\"Nuvora-6f27aa90a8b1\",\"field\":\"signal_code\",\"revision\":106,\"value\":\"V-6fa288badcab\"},{\"source_id\":\"2d9413003e56\",\"entity\":\"Nuvora-6f27aa90a8b1\",\"field\":\"signal_code\",\"revision\":98,\"value\":\"V-0042936a31df\"}]}", "extraction_valid": true, "id": "304121c5e6d0", "condition": "candidate"}
+{"id": "304121c5e6d0", "condition": "baseline"}
+{"id": "5573324874b5", "condition": "baseline"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"98d5b8e8590f\",\"entity\":\"Nuvora-755b22ca7dde\",\"field\":\"beacon_key\",\"revision\":8376,\"value\":\"V-176332e169b2\"},{\"source_id\":\"e6de95dd14a4\",\"entity\":\"Nuvora-755b22ca7dde\",\"field\":\"beacon_key\",\"revision\":8416,\"value\":\"V-fe647f7e5d0a\"}]}", "extraction_valid": true, "id": "5573324874b5", "condition": "candidate"}
+{"extraction_response": "{\"records\":[{\"source_id\":\"09b702f2ff0b\",\"entity\":\"Nuvora-d2c94e2f7f1f\",\"field\":\"signal_code\",\"revision\":4106,\"value\":\"V-d807b6dc04cb\"},{\"source_id\":\"95e59cd14f77\",\"entity\":\"Nuvora-d2c94e2f7f1f\",\"field\":\"signal_code\",\"revision\":3688,\"value\":\"V-ea8126532ff7\"}]}", "extraction_valid": true, "id": "c27d4b08be2c", "condition": "candidate"}
+{"id": "c27d4b08be2c", "condition": "baseline"}
+{"id": "9f72d6639f2f", "condition": "baseline"}
+{"extraction_response": "{\"records\":[]}", "extraction_valid": true, "id": "9f72d6639f2f", "condition": "candidate"}

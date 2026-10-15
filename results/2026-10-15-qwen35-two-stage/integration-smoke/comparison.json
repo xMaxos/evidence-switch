@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "baseline": {
+    "cases": 6,
+    "pairs": 3,
+    "responses": 6,
+    "coverage": 1.0,
+    "format_accuracy": 1.0,
+    "answer_accuracy": 1.0,
+    "citation_accuracy": 1.0,
+    "strict_accuracy": 1.0,
+    "pair_accuracy": 1.0,
+    "abstention_accuracy": 1.0,
+    "false_abstention_rate": 0.0
+  },
+  "candidate": {
+    "cases": 6,
+    "pairs": 3,
+    "responses": 6,
+    "coverage": 1.0,
+    "format_accuracy": 1.0,
+    "answer_accuracy": 1.0,
+    "citation_accuracy": 1.0,
+    "strict_accuracy": 1.0,
+    "pair_accuracy": 1.0,
+    "abstention_accuracy": 1.0,
+    "false_abstention_rate": 0.0
+  },
+  "fixed_ids": [],
+  "regressed_ids": []
+}

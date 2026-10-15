@@ -1,0 +1,60 @@
+{
+  "frozen_utc": "2026-10-15T12:55:27.867282+00:00",
+  "model": {
+    "name": "qwen3.5:9b",
+    "model": "qwen3.5:9b",
+    "modified_at": "2026-09-09T00:34:46.0048347+02:00",
+    "size": 6594474711,
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "9.7B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 4096
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ]
+  },
+  "ollama": {
+    "version": "0.35.0"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 20261015,
+    "num_ctx": 4096,
+    "num_predict": 512
+  },
+  "think": false,
+  "extract_instructions": {
+    "en": "Select ALL supplied records whose entity AND field exactly match the question. Keep both newer and older matching records. Do not answer the question or choose a winning revision yet. Copy matching records exactly, without inventing or editing any field. Return only JSON of the form {\"records\":[...]} containing the complete matching record objects. If none match, return {\"records\":[]}. Do not include explanations or code fences.",
+    "de": "Wähle ALLE vorgegebenen Datensätze aus, deren entity UND field exakt zur Frage passen. Behalte sowohl neuere als auch ältere passende Datensätze. Beantworte die Frage noch nicht und wähle noch keine maßgebliche Revision. Kopiere passende Datensätze exakt, ohne Felder zu erfinden oder zu verändern. Gib nur JSON der Form {\"records\":[...]} mit den vollständigen passenden Datensatzobjekten aus. Falls keiner passt, gib {\"records\":[]} aus. Keine Erklärungen oder Codeblöcke.",
+    "es": "Selecciona TODOS los registros proporcionados cuyos entity Y field coincidan exactamente con la pregunta. Conserva tanto los registros coincidentes nuevos como los antiguos. Todavía no respondas la pregunta ni elijas la revisión ganadora. Copia los registros coincidentes exactamente, sin inventar ni modificar campos. Devuelve solo JSON con la forma {\"records\":[...]} que contenga los objetos completos de los registros coincidentes. Si no hay ninguno, devuelve {\"records\":[]}. Sin explicaciones ni bloques de código."
+  },
+  "prompt_hashes": {
+    "holdout": "ef96f4dd05f7d572d79cf1c9719e557a879e79f53671d33b2ab107b4a634580d",
+    "confirmation": "ccc68bcd9cc8a7a8479cc9acbafa5aea552927ed92bcd1992794f0ec52963015"
+  },
+  "api_fees_eur": 0,
+  "primary": {
+    "seed": 505,
+    "cases": 54
+  },
+  "confirmation": {
+    "seed": 606,
+    "cases": 18
+  },
+  "confirmation_rule": "Run unchanged if holdout pair accuracy improves.",
+  "selection": "After a disclosed incomplete thinking-mode run, test a different frozen workflow on different seeds. No tuning after these new results.",
+  "method": "Model extracts all matching records; code validates only unchanged membership in supplied records, not relevance or maximum revision. Same model answers independently from extracted records. No answer keys or external tools sent to model.",
+  "runtime_rule": "Two model calls for candidate versus one baseline; report time and tokens. Invalid extraction counts as a failure; no repair or selective retry."
+}

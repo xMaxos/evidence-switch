@@ -1,0 +1,15 @@
+{
+  "stopped_utc": "2026-10-15T12:53:13.620417+00:00",
+  "status": "aborted_incomplete",
+  "reason": "Multiple truncated answers at the frozen2048-token budget; too slow for this practical test. No change to cap or candidate mid-run; retain all completed outputs. No completed54-case performance claim.",
+  "completed_request_stop_reasons": {
+    "baseline": {
+      "stop": 13
+    },
+    "candidate": {
+      "stop": 9,
+      "length": 3
+    }
+  },
+  "next_method": "Two-stage extraction then answer selection, think=false; different fresh seeds505 and606."
+}

@@ -1,0 +1,46 @@
+{
+  "holdout": {
+    "counts": {
+      "cases": 54,
+      "with_extra_records": 3,
+      "with_missing_matching_records": 0,
+      "invalid_extraction": 0
+    },
+    "details": [
+      {
+        "id": "371dd516da97",
+        "extra": [
+          "ba1f326ec2f1",
+          "de146ee26e9c"
+        ],
+        "missing": []
+      },
+      {
+        "id": "df0fd9c87891",
+        "extra": [
+          "54b27b5d0b21",
+          "c265d1c806ac"
+        ],
+        "missing": []
+      },
+      {
+        "id": "8559c7c503fe",
+        "extra": [
+          "3779569901a1",
+          "fc66ee3b585c"
+        ],
+        "missing": []
+      }
+    ]
+  },
+  "confirmation": {
+    "counts": {
+      "cases": 18,
+      "with_extra_records": 0,
+      "with_missing_matching_records": 0,
+      "invalid_extraction": 0
+    },
+    "details": []
+  },
+  "fresh_unique_cases": 72
+}
