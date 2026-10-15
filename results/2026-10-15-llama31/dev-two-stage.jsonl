@@ -1,0 +1,18 @@
+{"id": "5fc883abf8c4", "response": "{\n  \"answer\": \"V-32cbd968cc47\",\n  \"citations\": [\n    \"e587a9b45e36\"\n  ]\n}"}
+{"id": "2a6bc341760a", "response": "{\n  \"answer\": \"V-e8cd1b5710d5\",\n  \"citations\": [\n    \"c901290d42c7\"\n  ]\n}"}
+{"id": "2eb285087cb4", "response": {"error": "invalid_extraction"}}
+{"id": "85d8b1b40fff", "response": "{\n  \"answer\": \"V-51965bac5ee6\",\n  \"citations\": [\n    \"955499dc7bb1\"\n  ]\n}"}
+{"id": "ad78a0a733d9", "response": "{\n  \"answer\": \"V-a0ea743512ad\",\n  \"citations\": [\n    \"1caf4e472eab\"\n  ]\n}"}
+{"id": "5b38f56c6b5f", "response": "{\"answer\":\"V-eb7aa8fb4e7b\",\"citations\":[\"1caf4e472eab\"]}"}
+{"id": "2eb297cd6291", "response": "{\"answer\":\"V-61f2becc89b4\",\"citations\":[{\"source_id\":\"ee34cb920f51\"}]}"}
+{"id": "893ffe456d09", "response": "{\n  \"answer\": \"V-9ea23d07fb53\",\n  \"citations\": [\n    \"181e8ed6027d\"\n  ]\n}"}
+{"id": "d5bcd8cd3989", "response": "{\n  \"answer\": \"V-d0b9a6bdd549\",\n  \"citations\": [\n    \"e603b317ccb6\"\n  ]\n}"}
+{"id": "737fb93359bd", "response": "{\n  \"answer\": \"V-d0b9a6bdd549\",\n  \"citations\": [\n    \"e603b317ccb6\"\n  ]\n}"}
+{"id": "52c065f65933", "response": "{\n  \"answer\": \"V-01e7a8ad917b\",\n  \"citations\": [\n    \"dc140aef96d6\"\n  ]\n}"}
+{"id": "54843456f373", "response": "{\n  \"answer\": \"V-e8cd1b5710d5\",\n  \"citations\": [\n    \"c901290d42c7\"\n  ]\n}"}
+{"id": "80b8b4779be9", "response": "{\"answer\":\"V-d281f71bdda7\",\"citations\":[{\"source_id\":\"13f5d4a51144\"}]}"}
+{"id": "a9c31ce2365b", "response": "{\"answer\":\"V-d281f71bdda7\",\"citations\":[{\"source_id\":\"13f5afd7731b\"}]}"}
+{"id": "c44f32b3ae76", "response": "{\n  \"answer\": \"V-14e3abf71de8\",\n  \"citations\": [\n    \"181e8ed6027d\"\n  ]\n}"}
+{"id": "e92351c5fbf0", "response": "{\"answer\":\"V-b389ea88e2b3\",\"citations\":[{\"source_id\":\"7dc798c93d40\"}]}"}
+{"id": "d64a94618f09", "response": "{\n  \"answer\": \"V-df4de68ff103\",\n  \"citations\": [\n    \"7ff583bdc550\"\n  ]\n}"}
+{"id": "79769e8003c8", "response": "{\"answer\":\"V-ce7c22b89fdc\",\"citations\":[{\"source_id\":\"e589afbdcfd1\"}]}"}

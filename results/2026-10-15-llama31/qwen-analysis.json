@@ -1,0 +1,357 @@
+{
+  "phase": "qwen-compatibility",
+  "seed": 909,
+  "groups": 2,
+  "cases": 36,
+  "pairs": 18,
+  "strategies": {
+    "two-stage": {
+      "summary": {
+        "cases": 36,
+        "pairs": 18,
+        "responses": 36,
+        "coverage": 1.0,
+        "format_accuracy": 1.0,
+        "answer_accuracy": 1.0,
+        "citation_accuracy": 1.0,
+        "strict_accuracy": 1.0,
+        "pair_accuracy": 1.0,
+        "abstention_accuracy": 1.0,
+        "false_abstention_rate": 0.0
+      },
+      "by_task": {
+        "distractor": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        },
+        "missing": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        },
+        "update": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "by_language": {
+        "de": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        },
+        "en": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        },
+        "es": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "strict_correct": 36,
+      "pairs_correct": 18,
+      "message_hashes_checked": 72,
+      "environment": {
+        "provider": "ollama",
+        "model": "qwen3.5:9b",
+        "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "ollama_version": "0.35.0",
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 20261015,
+          "num_ctx": 4096,
+          "num_predict": 512
+        }
+      },
+      "cost": {
+        "requests": 72,
+        "total_wall_seconds": 92.05767209990881,
+        "median_case_wall_seconds": 2.5941698999376968,
+        "median_case_wall_seconds_minus_load": 2.5904505999376966,
+        "output_tokens": 5151,
+        "prompt_tokens": 40712,
+        "max_output_tokens_per_call": 253,
+        "max_prompt_tokens_per_call": 863,
+        "non_stop_requests": 0,
+        "thinking_responses": 0
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "valid_extractions": 36,
+        "exact_relevance_cases": 34,
+        "cases_with_missing_records": 0,
+        "cases_with_extra_records": 2,
+        "issues": [
+          {
+            "id": "7252c6a003a2",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "118556cfec1e",
+              "663427bc75ba"
+            ]
+          },
+          {
+            "id": "c18650f17cc4",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "b47ef51d2b34",
+              "b6b513f5d0ad"
+            ]
+          }
+        ]
+      }
+    },
+    "two-stage-ids": {
+      "summary": {
+        "cases": 36,
+        "pairs": 18,
+        "responses": 36,
+        "coverage": 1.0,
+        "format_accuracy": 1.0,
+        "answer_accuracy": 1.0,
+        "citation_accuracy": 1.0,
+        "strict_accuracy": 1.0,
+        "pair_accuracy": 1.0,
+        "abstention_accuracy": 1.0,
+        "false_abstention_rate": 0.0
+      },
+      "by_task": {
+        "distractor": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        },
+        "missing": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        },
+        "update": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "by_language": {
+        "de": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        },
+        "en": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        },
+        "es": {
+          "cases": 12,
+          "pairs": 6,
+          "responses": 12,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": 1.0,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "strict_correct": 36,
+      "pairs_correct": 18,
+      "message_hashes_checked": 72,
+      "environment": {
+        "provider": "ollama",
+        "model": "qwen3.5:9b",
+        "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "ollama_version": "0.35.0",
+        "think": false,
+        "options": {
+          "temperature": 0,
+          "seed": 20261015,
+          "num_ctx": 4096,
+          "num_predict": 512
+        }
+      },
+      "cost": {
+        "requests": 72,
+        "total_wall_seconds": 43.06321799964644,
+        "median_case_wall_seconds": 1.235290850047022,
+        "median_case_wall_seconds_minus_load": 1.2308783500470222,
+        "output_tokens": 2030,
+        "prompt_tokens": 44800,
+        "max_output_tokens_per_call": 49,
+        "max_prompt_tokens_per_call": 866,
+        "non_stop_requests": 0,
+        "thinking_responses": 0
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "valid_extractions": 36,
+        "exact_relevance_cases": 33,
+        "cases_with_missing_records": 0,
+        "cases_with_extra_records": 3,
+        "issues": [
+          {
+            "id": "d06d179f83e7",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "44c3fe3d5a88",
+              "f567c0dfea53"
+            ]
+          },
+          {
+            "id": "cbfe748db811",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "a18d311428ca",
+              "ae1dd65701b1"
+            ]
+          },
+          {
+            "id": "7252c6a003a2",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "118556cfec1e",
+              "663427bc75ba"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "comparison": {
+    "schema_version": 1,
+    "baseline": {
+      "cases": 36,
+      "pairs": 18,
+      "responses": 36,
+      "coverage": 1.0,
+      "format_accuracy": 1.0,
+      "answer_accuracy": 1.0,
+      "citation_accuracy": 1.0,
+      "strict_accuracy": 1.0,
+      "pair_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "false_abstention_rate": 0.0
+    },
+    "candidate": {
+      "cases": 36,
+      "pairs": 18,
+      "responses": 36,
+      "coverage": 1.0,
+      "format_accuracy": 1.0,
+      "answer_accuracy": 1.0,
+      "citation_accuracy": 1.0,
+      "strict_accuracy": 1.0,
+      "pair_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "false_abstention_rate": 0.0
+    },
+    "fixed_ids": [],
+    "regressed_ids": []
+  },
+  "audit": {
+    "independent_gold_checked": 36,
+    "regenerated_cases_match": true,
+    "frozen_prompt_hash_matches": true,
+    "case_ids_disjoint_from_llama": true,
+    "environment_matches_plan": true,
+    "all_requests_stopped_normally": true
+  },
+  "interpretation": "Conditional compatibility check on the original model; excluded from the Llama primary result. Sequential conditions make timing descriptive. Production two-stage-ids is the experimental ID-plus-schema method, not the plain-ID ablation."
+}

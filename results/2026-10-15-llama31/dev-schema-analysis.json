@@ -1,0 +1,185 @@
+{
+  "phase": "dev-schema",
+  "seed": 707,
+  "groups": 1,
+  "cases": 18,
+  "pairs": 9,
+  "languages": [
+    "en",
+    "de",
+    "es"
+  ],
+  "audit": {
+    "independent_gold_checked": 18,
+    "regenerated_cases_match": true,
+    "development_holdout_ids_disjoint": true,
+    "balanced_trace_order_checked": true,
+    "frozen_prompt_hash_matches": true,
+    "raw_responses_match_predictions": true
+  },
+  "strategies": {
+    "two-stage-ids-schema": {
+      "summary": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 1.0,
+        "answer_accuracy": 0.8333333333333334,
+        "citation_accuracy": 0.8333333333333334,
+        "strict_accuracy": 0.8333333333333334,
+        "pair_accuracy": 0.6666666666666666,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "by_task": {
+        "distractor": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        },
+        "missing": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.5,
+          "citation_accuracy": 0.5,
+          "strict_accuracy": 0.5,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "update": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 1.0,
+          "citation_accuracy": 1.0,
+          "strict_accuracy": 1.0,
+          "pair_accuracy": 1.0,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "by_language": {
+        "de": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.8333333333333334,
+          "strict_accuracy": 0.8333333333333334,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "en": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.8333333333333334,
+          "strict_accuracy": 0.8333333333333334,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "es": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.8333333333333334,
+          "strict_accuracy": 0.8333333333333334,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "strict_correct": 15,
+      "pairs_correct": 6,
+      "message_hashes_checked": 36,
+      "cost": {
+        "requests": 36,
+        "total_wall_seconds": 13.05737859918736,
+        "median_case_wall_seconds": 0.7036007998976856,
+        "median_case_wall_seconds_minus_load": 0.6990398998976857,
+        "total_case_wall_seconds_minus_load": 12.97851909918736,
+        "output_tokens": 866,
+        "prompt_tokens": 19201,
+        "max_output_tokens_per_call": 36,
+        "max_prompt_tokens_per_call": 704,
+        "done_reasons": {
+          "stop": 36
+        },
+        "non_stop_requests": 0,
+        "thinking_responses": 0
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "valid_extractions": 18,
+        "exact_relevance_cases": 14,
+        "cases_with_missing_records": 0,
+        "cases_with_extra_records": 4,
+        "issues": [
+          {
+            "id": "5fc883abf8c4",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "e587a9b45e36"
+            ]
+          },
+          {
+            "id": "2eb297cd6291",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "0929f7b4b6d6",
+              "fcff1d2ddbde"
+            ]
+          },
+          {
+            "id": "893ffe456d09",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "710551e3814a"
+            ]
+          },
+          {
+            "id": "52c065f65933",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "c23f98a02995",
+              "dc140aef96d6"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "comparisons": {},
+  "interpretation": "The schema amendment was developed on the same 18 development cases and frozen before the 180-case holdout. Development results are exploratory and not new independent evidence. The holdout uses the same three synthetic task types, not new task families. Pairs are the statistical unit. ID selection plus an explicit final-output schema versus existing two-stage is the primary improvement comparison; existing two-stage versus direct tests transfer. Holm adjustment covers those two planned comparisons. All other comparisons, including plain IDs versus IDs plus schema, are exploratory ablations. Two-stage strategies allow up to twice the requests and output allowance of direct.",
+  "integration_gate": {
+    "frozen_rule": "Add ID+schema mode as an option only if holdout pair and strict accuracy do not fall versus two-stage, and either pair accuracy improves with fewer generated tokens, or generated tokens decrease at least 25% and median wall time at least 15%. Label unchanged quality as efficiency-only. Keep direct default; disclose individual regressions.",
+    "decision_eligible": false,
+    "passes": false,
+    "note": "Reused development cases; no paired comparison or adoption decision is made."
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "phase": "dev",
+  "seed": 707,
+  "groups": 1,
+  "cases": 18,
+  "pairs": 9,
+  "languages": [
+    "en",
+    "de",
+    "es"
+  ],
+  "audit": {
+    "independent_gold_checked": 18,
+    "regenerated_cases_match": true,
+    "development_holdout_ids_disjoint": true,
+    "balanced_trace_order_checked": true,
+    "frozen_prompt_hash_matches": true,
+    "raw_responses_match_predictions": true
+  },
+  "strategies": {
+    "direct": {
+      "summary": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.2777777777777778,
+        "citation_accuracy": 0.2777777777777778,
+        "strict_accuracy": 0.2777777777777778,
+        "pair_accuracy": 0.2222222222222222,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "by_task": {
+        "distractor": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.5,
+          "citation_accuracy": 0.5,
+          "strict_accuracy": 0.5,
+          "pair_accuracy": 0.3333333333333333,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        },
+        "missing": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.0,
+          "citation_accuracy": 0.0,
+          "strict_accuracy": 0.0,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "update": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.3333333333333333,
+          "citation_accuracy": 0.3333333333333333,
+          "strict_accuracy": 0.3333333333333333,
+          "pair_accuracy": 0.3333333333333333,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "by_language": {
+        "de": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.0,
+          "answer_accuracy": 0.0,
+          "citation_accuracy": 0.0,
+          "strict_accuracy": 0.0,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "en": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.5,
+          "citation_accuracy": 0.5,
+          "strict_accuracy": 0.5,
+          "pair_accuracy": 0.3333333333333333,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "es": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.3333333333333333,
+          "citation_accuracy": 0.3333333333333333,
+          "strict_accuracy": 0.3333333333333333,
+          "pair_accuracy": 0.3333333333333333,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "strict_correct": 5,
+      "pairs_correct": 2,
+      "message_hashes_checked": 18,
+      "cost": {
+        "requests": 18,
+        "total_wall_seconds": 16.866782600060105,
+        "median_case_wall_seconds": 0.528271900024265,
+        "median_case_wall_seconds_minus_load": 0.525953750024265,
+        "total_case_wall_seconds_minus_load": 9.436997300060105,
+        "output_tokens": 599,
+        "prompt_tokens": 12111,
+        "max_output_tokens_per_call": 38,
+        "max_prompt_tokens_per_call": 698,
+        "done_reasons": {
+          "stop": 18
+        },
+        "non_stop_requests": 0,
+        "thinking_responses": 0
+      },
+      "extraction": null
+    },
+    "two-stage": {
+      "summary": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.5555555555555556,
+        "citation_accuracy": 0.5555555555555556,
+        "strict_accuracy": 0.5555555555555556,
+        "pair_accuracy": 0.4444444444444444,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "by_task": {
+        "distractor": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.6666666666666666,
+          "citation_accuracy": 0.6666666666666666,
+          "strict_accuracy": 0.6666666666666666,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        },
+        "missing": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.3333333333333333,
+          "citation_accuracy": 0.3333333333333333,
+          "strict_accuracy": 0.3333333333333333,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "update": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.6666666666666666,
+          "citation_accuracy": 0.6666666666666666,
+          "strict_accuracy": 0.6666666666666666,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "by_language": {
+        "de": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.0,
+          "answer_accuracy": 0.0,
+          "citation_accuracy": 0.0,
+          "strict_accuracy": 0.0,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "en": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.8333333333333334,
+          "strict_accuracy": 0.8333333333333334,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "es": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.8333333333333334,
+          "strict_accuracy": 0.8333333333333334,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "strict_correct": 10,
+      "pairs_correct": 4,
+      "message_hashes_checked": 35,
+      "cost": {
+        "requests": 35,
+        "total_wall_seconds": 38.493663200642914,
+        "median_case_wall_seconds": 2.293891750043258,
+        "median_case_wall_seconds_minus_load": 2.2896370500432583,
+        "total_case_wall_seconds_minus_load": 38.419116500642915,
+        "output_tokens": 2868,
+        "prompt_tokens": 16904,
+        "max_output_tokens_per_call": 149,
+        "max_prompt_tokens_per_call": 701,
+        "done_reasons": {
+          "stop": 35
+        },
+        "non_stop_requests": 0,
+        "thinking_responses": 0
+      },
+      "extraction": {
+        "invalid_ids": [
+          "2eb285087cb4"
+        ],
+        "valid_extractions": 17,
+        "exact_relevance_cases": 14,
+        "cases_with_missing_records": 0,
+        "cases_with_extra_records": 3,
+        "issues": [
+          {
+            "id": "5fc883abf8c4",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "3e61f4dc91e7",
+              "e587a9b45e36"
+            ]
+          },
+          {
+            "id": "2eb297cd6291",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "a731ca39293e",
+              "ee34cb920f51"
+            ]
+          },
+          {
+            "id": "52c065f65933",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "c23f98a02995",
+              "dc140aef96d6"
+            ]
+          }
+        ]
+      }
+    },
+    "two-stage-ids": {
+      "summary": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.5555555555555556,
+        "citation_accuracy": 0.5,
+        "strict_accuracy": 0.5,
+        "pair_accuracy": 0.3333333333333333,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "by_task": {
+        "distractor": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.6666666666666666,
+          "citation_accuracy": 0.6666666666666666,
+          "strict_accuracy": 0.6666666666666666,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        },
+        "missing": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.3333333333333333,
+          "citation_accuracy": 0.3333333333333333,
+          "strict_accuracy": 0.3333333333333333,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "update": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.6666666666666666,
+          "answer_accuracy": 0.6666666666666666,
+          "citation_accuracy": 0.5,
+          "strict_accuracy": 0.5,
+          "pair_accuracy": 0.3333333333333333,
+          "abstention_accuracy": null,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "by_language": {
+        "de": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 0.0,
+          "answer_accuracy": 0.0,
+          "citation_accuracy": 0.0,
+          "strict_accuracy": 0.0,
+          "pair_accuracy": 0.0,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "en": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.8333333333333334,
+          "strict_accuracy": 0.8333333333333334,
+          "pair_accuracy": 0.6666666666666666,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        },
+        "es": {
+          "cases": 6,
+          "pairs": 3,
+          "responses": 6,
+          "coverage": 1.0,
+          "format_accuracy": 1.0,
+          "answer_accuracy": 0.8333333333333334,
+          "citation_accuracy": 0.6666666666666666,
+          "strict_accuracy": 0.6666666666666666,
+          "pair_accuracy": 0.3333333333333333,
+          "abstention_accuracy": 0.0,
+          "false_abstention_rate": 0.0
+        }
+      },
+      "strict_correct": 9,
+      "pairs_correct": 3,
+      "message_hashes_checked": 36,
+      "cost": {
+        "requests": 36,
+        "total_wall_seconds": 15.34113119984977,
+        "median_case_wall_seconds": 0.8334603999974206,
+        "median_case_wall_seconds_minus_load": 0.8295202499974206,
+        "total_case_wall_seconds_minus_load": 15.259319699849769,
+        "output_tokens": 972,
+        "prompt_tokens": 17251,
+        "max_output_tokens_per_call": 37,
+        "max_prompt_tokens_per_call": 704,
+        "done_reasons": {
+          "stop": 36
+        },
+        "non_stop_requests": 0,
+        "thinking_responses": 0
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "valid_extractions": 18,
+        "exact_relevance_cases": 14,
+        "cases_with_missing_records": 0,
+        "cases_with_extra_records": 4,
+        "issues": [
+          {
+            "id": "5fc883abf8c4",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "e587a9b45e36"
+            ]
+          },
+          {
+            "id": "2eb297cd6291",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "0929f7b4b6d6",
+              "fcff1d2ddbde"
+            ]
+          },
+          {
+            "id": "893ffe456d09",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "710551e3814a"
+            ]
+          },
+          {
+            "id": "52c065f65933",
+            "missing_source_ids": [],
+            "extra_source_ids": [
+              "c23f98a02995",
+              "dc140aef96d6"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "direct_vs_two-stage": {
+      "schema_version": 1,
+      "baseline": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.2777777777777778,
+        "citation_accuracy": 0.2777777777777778,
+        "strict_accuracy": 0.2777777777777778,
+        "pair_accuracy": 0.2222222222222222,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "candidate": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.5555555555555556,
+        "citation_accuracy": 0.5555555555555556,
+        "strict_accuracy": 0.5555555555555556,
+        "pair_accuracy": 0.4444444444444444,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "fixed_ids": [
+        "85d8b1b40fff",
+        "893ffe456d09",
+        "737fb93359bd",
+        "c44f32b3ae76",
+        "d64a94618f09"
+      ],
+      "regressed_ids": [],
+      "pair_fixed_ids": [
+        "055655dcba5b",
+        "55e2929f8be5"
+      ],
+      "pair_regressed_ids": [],
+      "pair_both_correct": 2,
+      "pair_both_wrong": 5,
+      "exact_mcnemar_two_sided_p": 0.5,
+      "statistical_unit": "paired before/after group",
+      "holm_adjusted_p_two_planned_comparisons": 1.0
+    },
+    "direct_vs_two-stage-ids": {
+      "schema_version": 1,
+      "baseline": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.2777777777777778,
+        "citation_accuracy": 0.2777777777777778,
+        "strict_accuracy": 0.2777777777777778,
+        "pair_accuracy": 0.2222222222222222,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "candidate": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.5555555555555556,
+        "citation_accuracy": 0.5,
+        "strict_accuracy": 0.5,
+        "pair_accuracy": 0.3333333333333333,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "fixed_ids": [
+        "85d8b1b40fff",
+        "737fb93359bd",
+        "c44f32b3ae76",
+        "d64a94618f09"
+      ],
+      "regressed_ids": [],
+      "pair_fixed_ids": [
+        "55e2929f8be5"
+      ],
+      "pair_regressed_ids": [],
+      "pair_both_correct": 2,
+      "pair_both_wrong": 6,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "statistical_unit": "paired before/after group"
+    },
+    "two-stage_vs_two-stage-ids": {
+      "schema_version": 1,
+      "baseline": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.5555555555555556,
+        "citation_accuracy": 0.5555555555555556,
+        "strict_accuracy": 0.5555555555555556,
+        "pair_accuracy": 0.4444444444444444,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "candidate": {
+        "cases": 18,
+        "pairs": 9,
+        "responses": 18,
+        "coverage": 1.0,
+        "format_accuracy": 0.6666666666666666,
+        "answer_accuracy": 0.5555555555555556,
+        "citation_accuracy": 0.5,
+        "strict_accuracy": 0.5,
+        "pair_accuracy": 0.3333333333333333,
+        "abstention_accuracy": 0.0,
+        "false_abstention_rate": 0.0
+      },
+      "fixed_ids": [],
+      "regressed_ids": [
+        "893ffe456d09"
+      ],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [
+        "055655dcba5b"
+      ],
+      "pair_both_correct": 3,
+      "pair_both_wrong": 5,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "statistical_unit": "paired before/after group",
+      "holm_adjusted_p_two_planned_comparisons": 1.0
+    }
+  },
+  "interpretation": "Development results are exploratory. The holdout contains new cases of the same three synthetic task types, not new task families. Pairs are the statistical unit. The ID strategy versus existing two-stage strategy is the primary improvement comparison; existing two-stage versus direct tests transfer. Holm adjustment covers those two planned comparisons. The direct versus ID comparison is exploratory. Two-stage strategies have up to twice the requests and output allowance of direct.",
+  "integration_gate": {
+    "frozen_rule": "Add ID mode as an option only if holdout pair and strict accuracy do not fall versus two-stage, and either pair accuracy improves with fewer generated tokens, or generated tokens decrease at least 25% and median wall time at least 15%. Label unchanged quality as efficiency-only. Keep direct default; disclose individual regressions.",
+    "decision_eligible": false,
+    "quality_non_decreasing": false,
+    "output_token_reduction_fraction": 0.6610878661087867,
+    "median_wall_reduction_fraction": 0.6366609714770963,
+    "quality_improvement_route": false,
+    "efficiency_route": true,
+    "passes": false,
+    "note": "Development is excluded from adoption decisions. Aggregate non-regression does not imply zero individually regressed cases."
+  }
+}

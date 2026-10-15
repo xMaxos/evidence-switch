@@ -117,6 +117,37 @@ class OllamaTests(unittest.TestCase):
         self.assertFalse(trace["extraction_valid"])
         self.assertEqual(len(trace["calls"]), 1)
 
+    def test_ids_selection_resolves_original_records_and_uses_schema_on_both_transports(self):
+        from evidenceswitch.selection import prepare_ids
+        selected = [self.records[1]["source_id"], self.records[0]["source_id"]]
+        extraction = json.dumps({"source_ids": selected})
+        answer = json.dumps(self.cases[0]["expected"])
+        prepared = prepare_ids(self.prompt["messages"])
+        expected = [prepared.extraction_messages, prepared.finish(extraction)]
+        for native in (True, False):
+            with self.subTest(native=native):
+                output = self.directory / f"ids-{native}.jsonl"
+                trace = self.directory / f"ids-{native}-trace.jsonl"
+                server = native_endpoint if native else endpoint
+                response = native_completion if native else completion
+                with server([response(extraction), response(answer)]) as (url, requests):
+                    run = run_ollama if native else run_prompts
+                    self.assertEqual(run(self.prompts, output, base_url=url, model="test-model",
+                                         strategy="two-stage-ids", trace_path=trace), 1)
+                chats = requests[3:] if native else requests
+                self.assertEqual([row["body"]["messages"] for row in chats], expected)
+                self.assertEqual(read_jsonl(output)[0]["response"], answer)
+                self.assertEqual(read_jsonl(trace)[0]["strategy"], "two-stage-ids")
+
+    def test_unknown_selected_id_fails_without_answer_request(self):
+        responses = [{"models": [{"name": "test-model"}]}, {}, {"version": "test"},
+                     native_completion('{"source_ids":["invented"]}')]
+        with patch("evidenceswitch.ollama._request", side_effect=responses) as request:
+            self.assertEqual(self.run_native(strategy="two-stage-ids", trace_path=self.trace), 1)
+        self.assertEqual(request.call_count, 4)
+        self.assertEqual(read_jsonl(self.output)[0]["response"], {"error": "invalid_extraction"})
+        self.assertFalse(read_jsonl(self.trace)[0]["extraction_valid"])
+
     def test_missing_and_cloud_models_fail_before_chat_or_output(self):
         for responses in ([{"models": []}],
                           [{"models": [{"name": "test-model"}]}, {"remote_host": "https://cloud.example"}],

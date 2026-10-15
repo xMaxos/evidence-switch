@@ -1,0 +1,29 @@
+{
+  "planned_utc": "2026-10-15T13:53:36.214656+00:00",
+  "status": "Supplementary diagnostic specified while the main experiment is running, before inspecting holdout outputs.",
+  "motivation": "Development only: all six German cases produced citation objects rather than source_id strings across the original three strategies. Separate schema compliance from content selection without altering actual strict success.",
+  "normalization": "Only parseable strict JSON with exactly answer/citations; normalize citations items exactly {source_id: string} into that string. The resulting answer/citations types, nonempty strings and unique citations must satisfy the unchanged core validator. Otherwise preserve the original failing response.",
+  "prohibited": [
+    "No code fence stripping",
+    "No invented citations",
+    "No gold-dependent repair",
+    "No answer changes",
+    "No primary-score or integration-gate changes",
+    "No raw prediction edits"
+  ],
+  "report": [
+    "Original strict correct",
+    "Counterfactual content correct",
+    "Responses normalized",
+    "Extra correct after normalization",
+    "Same counts per language"
+  ],
+  "interpretation": "If the new method has no content-score advantage, report that the measured gain is schema compliance rather than demonstrated better answer selection. Even a content advantage does not establish general reasoning improvement.",
+  "phases": {
+    "dev": 3,
+    "dev-schema": 1,
+    "holdout": 4
+  },
+  "requires_complete_predictions": true,
+  "script_sha256": "9461d601842ee1d1405ec500630855a454b8869df739a757eb8ab0046aa13ac1"
+}

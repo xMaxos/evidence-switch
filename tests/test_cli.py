@@ -66,6 +66,15 @@ class CliTests(unittest.TestCase):
         self.assertEqual(compatible.call_args.kwargs["strategy"], "two-stage")
         self.assertEqual(compatible.call_args.kwargs["trace_path"], "trace.jsonl")
 
+    def test_id_strategy_is_available_for_both_transports(self):
+        for command, target in (("run", "evidenceswitch.runner.run_prompts"),
+                                ("run-ollama", "evidenceswitch.ollama.run_ollama")):
+            with self.subTest(command=command), patch(target, return_value=1) as run:
+                self.assertEqual(self.invoke(command, "--prompts", "prompts.jsonl", "--out", "out.jsonl",
+                                             "--model", "model", "--base-url", "http://localhost:8000",
+                                             "--strategy", "two-stage-ids"), 0)
+                self.assertEqual(run.call_args.kwargs["strategy"], "two-stage-ids")
+
 
 if __name__ == "__main__":
     unittest.main()

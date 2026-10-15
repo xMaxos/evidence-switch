@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-15T13:48:16.136678+00:00",
+  "purpose": "Conditional compatibility check on the original model, excluded from the Llama primary result.",
+  "run_if": "The frozen Llama holdout adoption gate passes.",
+  "model": "qwen3.5:9b",
+  "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "seed": 909,
+  "groups": 2,
+  "cases": 36,
+  "languages": [
+    "en",
+    "de",
+    "es"
+  ],
+  "strategies": [
+    "two-stage",
+    "two-stage-ids"
+  ],
+  "candidate_definition": "Production two-stage-ids must exactly replay experimental two-stage-ids-schema.",
+  "options": {
+    "temperature": 0,
+    "seed": 20261015,
+    "num_ctx": 4096,
+    "num_predict": 512
+  },
+  "think": false,
+  "prompt_hash": "00ed2ba43a34efda2de0811463127251670fb51a4fb4595b8301404d5f6d4cff",
+  "order": "Two complete sequential CLI runs: current two-stage, then ID selection plus answer-format hint. Report timing as descriptive.",
+  "rules": "No prompt tuning or retries on these cases; report regressions. No model training. No paid API."
+}
