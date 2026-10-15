@@ -1,0 +1,192 @@
+# EvidenceSwitch
+
+**Small, reproducible regression checks for evidence-sensitive AI answers.**
+
+When the evidence changes, does the answer change? When the evidence disappears,
+does the model admit it? When an irrelevant record changes, does the answer stay
+correct?
+
+EvidenceSwitch generates paired, fictional record-reading tasks and scores the
+answers without a model-based judge. Use it to catch regressions while changing a
+model, system prompt, or inference setup. Python 3.10+, no runtime dependencies,
+MIT licensed. Generation, scoring, comparison, and the demo work offline.
+
+It does **not** train models or prove general intelligence. It makes one narrow
+class of mistakes easier to reproduce and fix.
+
+## Try it in a minute
+
+From this repository's directory:
+
+```sh
+python -m evidenceswitch demo --out demo
+```
+
+Expected output includes:
+
+```text
+SIMULATED oracle: 100.0% pair accuracy
+SIMULATED stale: 33.3% pair accuracy
+These fixtures demonstrate scoring, not real model performance.
+```
+
+The oracle copies the answer key. The stale responder always copies the original
+answer, even after evidence changes or disappears. Neither is a real AI model.
+The demo saves the cases, prompts, predictions, and detailed reports for inspection.
+
+Optional installation from this checkout:
+
+```sh
+python -m pip install .
+evidenceswitch --help
+```
+
+This project is not currently published on PyPI. Use the repository's source.
+
+## What is tested?
+
+Each pair has two independently presented prompts with the same question.
+The rules require an exact entity-and-field match, then the highest **numeric**
+revision among matching records. A correct answer cites exactly that record.
+
+| Task | Change in the second prompt | Expected behavior |
+| --- | --- | --- |
+| `update` | The matching evidence receives a new value and revision | Change the answer |
+| `missing` | All matching evidence is replaced with irrelevant records | Return null and no citations |
+| `distractor` | Irrelevant evidence changes | Keep the same answer and citation |
+
+English, German, and Spanish instructions are included. Record field names stay
+the same across languages. All entities and values are artificial, not facts
+about real people. Record order, source identifiers, revisions, and values vary
+with the seed. Case identifiers are bound to prompt contents. Paired cases are
+shuffled and must be run in separate conversations.
+
+## Generate and evaluate
+
+```sh
+python -m evidenceswitch generate --out data --seed 42 --groups 10
+```
+
+This produces **180 cases = 10 pairs × 3 tasks × 3 languages × 2 variants**:
+
+- `data/prompts.jsonl`: only case IDs and model-facing messages.
+- `data/cases.jsonl`: messages, pair metadata, and answer keys. Keep this out of model inputs.
+- `data/manifest.json`: seed, generator version, and generation settings.
+
+`--groups` is the number of pairs **per task per language**.
+Use `--languages de` or `--languages en es` to select a subset.
+Output directories and files are never overwritten; choose a new path for each run.
+For a small inspectable fixture, see [examples/mini](examples/mini): six English
+cases generated with seed 7 and one pair per task.
+
+Collect one prediction per case in JSONL:
+
+```json
+{"id":"<case ID from prompts.jsonl>","response":{"answer":"<exact value>","citations":["<source ID>"]}}
+```
+
+`response` can also contain the model's raw response as a JSON-encoded string.
+For absent evidence, the required response is `{"answer":null,"citations":[]}`.
+Extra keys, duplicate keys/citations, code fences, and non-JSON output fail format
+checks. Answers use exact string matching; source-ID array order is ignored.
+
+```sh
+python -m evidenceswitch score --cases data/cases.jsonl --responses responses.jsonl --out report.json
+```
+
+Missing predictions count as failures against the **entire** case set. Unknown or
+duplicate prediction IDs and broken pairs are rejected. A partial `--limit` run
+therefore shows partial coverage; it is not a score for a smaller test set.
+
+## Optional model endpoint runner
+
+If you already have a server exposing an OpenAI-compatible Chat Completions API:
+
+```sh
+python -m evidenceswitch run --prompts data/prompts.jsonl --base-url http://localhost:8000/v1 --model your-model --out responses.jsonl --limit 6
+```
+
+This command sends requests. Hosted endpoints may charge for them. Start with a
+small limit; remove it explicitly when ready for the full set. No hosted model
+evaluation was performed to produce the included demo.
+
+For authentication, set your key in an environment variable and pass only its
+name using `--api-key-env MODEL_API_KEY`. The runner sends messages, model,
+`temperature=0`, and `stream=false`; it never sends case IDs, pair metadata, or
+answer keys. Input files with extra fields are rejected before any request.
+
+Requests are sequential, with no retries, redirects, or environment proxies.
+HTTPS is required except on loopback hosts. Completed responses are kept if a
+later request fails. A failed output is not automatically resumed; use a new
+path. `--timeout 60` controls each request timeout. The endpoint must support
+these Chat Completions parameters and a string `choices[0].message.content`;
+other API styles and provider-specific reasoning options are not supported.
+Model outputs are saved verbatim locally, so review them before sharing.
+
+## Interpret the report
+
+| Metric | Meaning |
+| --- | --- |
+| `coverage` | Fraction of cases with a submitted prediction |
+| `format_accuracy` | Fraction with the required JSON shape |
+| `answer_accuracy` | Fraction with a valid shape and the exact expected answer |
+| `citation_accuracy` | Fraction with a valid shape and exactly the expected source IDs |
+| `strict_accuracy` | Fraction passing both answer and citation checks |
+| `pair_accuracy` | Fraction of pairs with **both** cases strictly correct |
+| `abstention_accuracy` | Fraction of unanswerable cases returning null in a valid shape |
+| `false_abstention_rate` | Fraction of answerable cases returning null in a valid shape |
+
+Each metric includes missing predictions in its denominator. Abstention checks
+look at the answer; citation correctness is measured separately. Rates with no
+applicable cases are `null`. Reports also include per-task and per-language
+summaries and per-case failure flags. Citation correctness checks labels, not
+whether the model causally relied on the cited text.
+
+## Catch regressions in CI
+
+Use the **same generated cases** for both runs:
+
+```sh
+python -m evidenceswitch compare --cases data/cases.jsonl --baseline baseline.jsonl --candidate candidate.jsonl --out comparison.json --fail-on-regression
+```
+
+The report lists individual fixes and regressions, even if the overall score is
+unchanged. Exit code `1` indicates at least one strict-correct case regressed.
+For a score threshold, use `score --min-pair-accuracy 0.9`. Exit codes: `0` success,
+`1` evaluation gate failed, `2` invalid input, file, or endpoint error.
+
+## Limits and related work
+
+These are small synthetic structured-record tasks. They do not cover open-ended
+factuality, real retrieval quality, long-context reasoning, multi-turn learning,
+prompt injection, or general multilingual competence. A parser can solve them;
+that is useful for checking the harness, not evidence of intelligence. Template
+shortcuts can remain. New seeds change fixtures, not the underlying task family.
+Do not tune on one seed and treat its score as unseen-test performance. Record
+the seed, generator version, model version, and inference settings when sharing
+results. Scores on different generator versions are not directly comparable.
+
+Context-sensitive evaluation already has substantial prior work:
+
+- [FaithEval](https://github.com/SalesforceAIResearch/FaithEval) evaluates unanswerable, inconsistent, and counterfactual contexts.
+- [PFaithBench](https://arxiv.org/abs/2610.07894) studies paired context-sensitive faithfulness.
+- [ContextCite](https://github.com/MadryLab/context-cite) investigates attribution of generated statements to context.
+
+EvidenceSwitch is a compact engineering tool, not a replacement for these
+benchmarks and not a claim of a new research method. No external datasets or
+implementation code are bundled.
+
+## Contribute
+
+```sh
+python -m unittest discover -s tests -v
+```
+
+Tests use the standard library; runner tests start a temporary local HTTP server.
+No model or API key is needed. GitHub Actions is configured for Python 3.10,
+3.12, and 3.13 on Linux and Windows.
+
+Useful contributions include small reproducible failures, new language templates,
+and fixtures that remove answer shortcuts. Include the seed and expected behavior.
+Keep fixture generation and scoring deterministic, add a regression test, and
+separate model prompts from answer keys. Do not submit private data or API keys.
