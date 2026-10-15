@@ -1,0 +1,567 @@
+{
+  "phase": "dev",
+  "model": "llama",
+  "cases": 18,
+  "pairs": 9,
+  "strategies": {
+    "two-stage-ids": {
+      "answer_correct": 15,
+      "grounded_correct": 15,
+      "strict_correct": 15,
+      "answer_pairs_correct": 6,
+      "strict_pairs_correct": 6,
+      "format_valid": 18,
+      "missing_evidence_correct": 1,
+      "missing_evidence_cases": 3,
+      "by_language": {
+        "en": {
+          "answer_correct": 5,
+          "grounded_correct": 5,
+          "strict_correct": 5
+        },
+        "de": {
+          "answer_correct": 4,
+          "grounded_correct": 4,
+          "strict_correct": 4
+        },
+        "es": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        }
+      },
+      "cost": {
+        "requests": 36,
+        "output_tokens": 833,
+        "input_tokens": 19108,
+        "median_seconds": 0.7825793999945745,
+        "total_seconds": 17.954820500686765,
+        "non_stop_requests": 0,
+        "max_output_tokens": 39
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "irrelevance_or_omission": [
+          {
+            "id": "30232816edd0",
+            "missing": [],
+            "extra": [
+              "7179d664f902"
+            ]
+          },
+          {
+            "id": "6159690edb51",
+            "missing": [
+              "9d3943e7edf6"
+            ],
+            "extra": []
+          },
+          {
+            "id": "b1026ffdf0dc",
+            "missing": [],
+            "extra": [
+              "dd4227950bf8",
+              "e064244a4797"
+            ]
+          },
+          {
+            "id": "b2c73ec854e3",
+            "missing": [],
+            "extra": [
+              "588ce7ff1835",
+              "67faea1fe5ed"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "30232816edd0",
+          "pair_id": "754708ee95a4",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "a38094f78212",
+          "pair_id": "1d960d7b6f90",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "bc4f6dc5ea84",
+          "pair_id": "287d3743e1a4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fdd23962869e",
+          "pair_id": "754708ee95a4",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "59fca6cf74f9",
+          "pair_id": "0c0c57bf65ca",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "799bdf5dc75e",
+          "pair_id": "0c661683dbee",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "93b6c8685200",
+          "pair_id": "2cb1251eb8e6",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "96c592e11a65",
+          "pair_id": "f667996fa384",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f78507a2dca0",
+          "pair_id": "2ec48703da2f",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "da4a2f1da83c",
+          "pair_id": "2ec48703da2f",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "716430188d43",
+          "pair_id": "287d3743e1a4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "187874c108c1",
+          "pair_id": "1d960d7b6f90",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2063386b39d5",
+          "pair_id": "0c0c57bf65ca",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "dff3a6402fa6",
+          "pair_id": "f667996fa384",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "192c71687644",
+          "pair_id": "b02880a86e45",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6159690edb51",
+          "pair_id": "b02880a86e45",
+          "language": "de",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "b1026ffdf0dc",
+          "pair_id": "2cb1251eb8e6",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "b2c73ec854e3",
+          "pair_id": "0c661683dbee",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    },
+    "two-stage-audit": {
+      "answer_correct": 1,
+      "grounded_correct": 1,
+      "strict_correct": 1,
+      "answer_pairs_correct": 0,
+      "strict_pairs_correct": 0,
+      "format_valid": 2,
+      "missing_evidence_correct": 0,
+      "missing_evidence_cases": 3,
+      "by_language": {
+        "en": {
+          "answer_correct": 0,
+          "grounded_correct": 0,
+          "strict_correct": 0
+        },
+        "de": {
+          "answer_correct": 1,
+          "grounded_correct": 1,
+          "strict_correct": 1
+        },
+        "es": {
+          "answer_correct": 0,
+          "grounded_correct": 0,
+          "strict_correct": 0
+        }
+      },
+      "cost": {
+        "requests": 20,
+        "output_tokens": 1904,
+        "input_tokens": 15028,
+        "median_seconds": 1.608282050001435,
+        "total_seconds": 26.03071829979308,
+        "non_stop_requests": 0,
+        "max_output_tokens": 148
+      },
+      "extraction": {
+        "invalid_ids": [
+          "30232816edd0",
+          "a38094f78212",
+          "bc4f6dc5ea84",
+          "fdd23962869e",
+          "59fca6cf74f9",
+          "799bdf5dc75e",
+          "93b6c8685200",
+          "96c592e11a65",
+          "716430188d43",
+          "187874c108c1",
+          "2063386b39d5",
+          "dff3a6402fa6",
+          "192c71687644",
+          "6159690edb51",
+          "b1026ffdf0dc",
+          "b2c73ec854e3"
+        ],
+        "irrelevance_or_omission": [
+          {
+            "id": "f78507a2dca0",
+            "missing": [
+              "18f9ee0f4382",
+              "6400bddb897e"
+            ],
+            "extra": []
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "30232816edd0",
+          "pair_id": "754708ee95a4",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "a38094f78212",
+          "pair_id": "1d960d7b6f90",
+          "language": "es",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "bc4f6dc5ea84",
+          "pair_id": "287d3743e1a4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "fdd23962869e",
+          "pair_id": "754708ee95a4",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "59fca6cf74f9",
+          "pair_id": "0c0c57bf65ca",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "799bdf5dc75e",
+          "pair_id": "0c661683dbee",
+          "language": "en",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "93b6c8685200",
+          "pair_id": "2cb1251eb8e6",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "96c592e11a65",
+          "pair_id": "f667996fa384",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "f78507a2dca0",
+          "pair_id": "2ec48703da2f",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "da4a2f1da83c",
+          "pair_id": "2ec48703da2f",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "716430188d43",
+          "pair_id": "287d3743e1a4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "187874c108c1",
+          "pair_id": "1d960d7b6f90",
+          "language": "es",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "2063386b39d5",
+          "pair_id": "0c0c57bf65ca",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "dff3a6402fa6",
+          "pair_id": "f667996fa384",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "192c71687644",
+          "pair_id": "b02880a86e45",
+          "language": "de",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "6159690edb51",
+          "pair_id": "b02880a86e45",
+          "language": "de",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "b1026ffdf0dc",
+          "pair_id": "2cb1251eb8e6",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "b2c73ec854e3",
+          "pair_id": "0c661683dbee",
+          "language": "en",
+          "task": "update",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "answer_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [
+        "a38094f78212",
+        "bc4f6dc5ea84",
+        "fdd23962869e",
+        "59fca6cf74f9",
+        "799bdf5dc75e",
+        "93b6c8685200",
+        "96c592e11a65",
+        "f78507a2dca0",
+        "716430188d43",
+        "187874c108c1",
+        "2063386b39d5",
+        "dff3a6402fa6",
+        "192c71687644",
+        "b2c73ec854e3"
+      ],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [
+        "1d960d7b6f90",
+        "287d3743e1a4",
+        "0c0c57bf65ca",
+        "0c661683dbee",
+        "f667996fa384",
+        "2ec48703da2f"
+      ],
+      "pair_exact_mcnemar_p": 0.03125
+    },
+    "grounded_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [
+        "a38094f78212",
+        "bc4f6dc5ea84",
+        "fdd23962869e",
+        "59fca6cf74f9",
+        "799bdf5dc75e",
+        "93b6c8685200",
+        "96c592e11a65",
+        "f78507a2dca0",
+        "716430188d43",
+        "187874c108c1",
+        "2063386b39d5",
+        "dff3a6402fa6",
+        "192c71687644",
+        "b2c73ec854e3"
+      ],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [
+        "1d960d7b6f90",
+        "287d3743e1a4",
+        "0c0c57bf65ca",
+        "0c661683dbee",
+        "f667996fa384",
+        "2ec48703da2f"
+      ],
+      "pair_exact_mcnemar_p": 0.03125
+    },
+    "strict_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [
+        "a38094f78212",
+        "bc4f6dc5ea84",
+        "fdd23962869e",
+        "59fca6cf74f9",
+        "799bdf5dc75e",
+        "93b6c8685200",
+        "96c592e11a65",
+        "f78507a2dca0",
+        "716430188d43",
+        "187874c108c1",
+        "2063386b39d5",
+        "dff3a6402fa6",
+        "192c71687644",
+        "b2c73ec854e3"
+      ],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [
+        "1d960d7b6f90",
+        "287d3743e1a4",
+        "0c0c57bf65ca",
+        "0c661683dbee",
+        "f667996fa384",
+        "2ec48703da2f"
+      ],
+      "pair_exact_mcnemar_p": 0.03125
+    }
+  },
+  "audit": {
+    "independent_gold": 18,
+    "raw_calls_and_hashes": 56,
+    "balanced_order": true
+  }
+}

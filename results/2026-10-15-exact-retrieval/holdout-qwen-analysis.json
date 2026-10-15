@@ -1,0 +1,3526 @@
+{
+  "phase": "holdout",
+  "model": "qwen",
+  "cases": 180,
+  "pairs": 90,
+  "strategies": {
+    "two-stage-ids": {
+      "answer_correct": 178,
+      "grounded_correct": 178,
+      "strict_correct": 178,
+      "answer_pairs_correct": 88,
+      "strict_pairs_correct": 88,
+      "format_valid": 179,
+      "missing_evidence_correct": 28,
+      "missing_evidence_cases": 30,
+      "by_language": {
+        "en": {
+          "answer_correct": 59,
+          "grounded_correct": 59,
+          "strict_correct": 59
+        },
+        "de": {
+          "answer_correct": 59,
+          "grounded_correct": 59,
+          "strict_correct": 59
+        },
+        "es": {
+          "answer_correct": 60,
+          "grounded_correct": 60,
+          "strict_correct": 60
+        }
+      },
+      "cost": {
+        "requests": 359,
+        "output_tokens": 10322,
+        "input_tokens": 224291,
+        "median_seconds": 1.231892800075002,
+        "total_seconds": 213.1451921002008,
+        "non_stop_requests": 0,
+        "max_output_tokens": 51
+      },
+      "extraction": {
+        "invalid_ids": [
+          "72d7dde61863"
+        ],
+        "irrelevance_or_omission": [
+          {
+            "id": "1d26a656988a",
+            "missing": [],
+            "extra": [
+              "6b03f8ef9d88"
+            ]
+          },
+          {
+            "id": "333903b9961e",
+            "missing": [],
+            "extra": [
+              "01f653279e11",
+              "443bd21bd72e"
+            ]
+          },
+          {
+            "id": "005d69c2e657",
+            "missing": [],
+            "extra": [
+              "acd9a6f9db7d"
+            ]
+          },
+          {
+            "id": "2e4ecc26c4dd",
+            "missing": [],
+            "extra": [
+              "feb958d54c7f"
+            ]
+          },
+          {
+            "id": "a1dbdd77412a",
+            "missing": [],
+            "extra": [
+              "8b8e61146140",
+              "f9011be4928d"
+            ]
+          },
+          {
+            "id": "3e265e17888a",
+            "missing": [],
+            "extra": [
+              "a2ab8816e6c7"
+            ]
+          },
+          {
+            "id": "4438c4985f09",
+            "missing": [],
+            "extra": [
+              "068ce9a02044",
+              "dddfb1553cc4"
+            ]
+          },
+          {
+            "id": "afd09bccbdd0",
+            "missing": [],
+            "extra": [
+              "f86881b558b4",
+              "faa5cbe07bba"
+            ]
+          },
+          {
+            "id": "9abb2d3d5798",
+            "missing": [],
+            "extra": [
+              "b59a8d6aa7cc",
+              "fbf76393ac43"
+            ]
+          },
+          {
+            "id": "10b434599947",
+            "missing": [],
+            "extra": [
+              "4658f5b712af"
+            ]
+          },
+          {
+            "id": "925217698785",
+            "missing": [],
+            "extra": [
+              "04995de50267",
+              "2b4acf1d50a0"
+            ]
+          },
+          {
+            "id": "d9d1b3b51c02",
+            "missing": [],
+            "extra": [
+              "86f2a5e9ac23",
+              "ae5164c5c785"
+            ]
+          },
+          {
+            "id": "dd032e5aefa1",
+            "missing": [],
+            "extra": [
+              "51049fd4b10a",
+              "a44d387c4c1e"
+            ]
+          },
+          {
+            "id": "704ed2a4eeca",
+            "missing": [],
+            "extra": [
+              "dddd886b0815"
+            ]
+          },
+          {
+            "id": "c0b80b8f6bb8",
+            "missing": [],
+            "extra": [
+              "9929713f8a06",
+              "ed20bec8de00"
+            ]
+          },
+          {
+            "id": "9bc008a9f298",
+            "missing": [],
+            "extra": [
+              "bf6000553209",
+              "d63daa38de91"
+            ]
+          },
+          {
+            "id": "08dc5737caa6",
+            "missing": [],
+            "extra": [
+              "80d2e1e4a1f4",
+              "ba071f8d1c49"
+            ]
+          },
+          {
+            "id": "d8f188a8d345",
+            "missing": [],
+            "extra": [
+              "8fbb703e3891"
+            ]
+          },
+          {
+            "id": "c5843505569b",
+            "missing": [],
+            "extra": [
+              "d5a6af7c23dc",
+              "d82db422b64b"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "b61fc3e466d7",
+          "pair_id": "d96b6979ed4c",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "be2c37b00db6",
+          "pair_id": "6cf355716dbc",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5acbf7416437",
+          "pair_id": "dbdfe373c85b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3c5477979c56",
+          "pair_id": "b11a583e7614",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e1e29c29742a",
+          "pair_id": "6a47500f8de2",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "07a955f8277d",
+          "pair_id": "46c5a1b1567e",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "af9973096bc0",
+          "pair_id": "2bd49a188f34",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "1d26a656988a",
+          "pair_id": "ffee6b88242f",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "333903b9961e",
+          "pair_id": "17d443bcc252",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "95a0d9474fca",
+          "pair_id": "39347f64c210",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "005d69c2e657",
+          "pair_id": "48484c3379d3",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "300b0b177fdf",
+          "pair_id": "20389ceca0d2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2e4ecc26c4dd",
+          "pair_id": "4a58517c7015",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3d0926d42898",
+          "pair_id": "ca84cef0dfdd",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2f80801c2ee9",
+          "pair_id": "ce797f5c389d",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3649afdcbc62",
+          "pair_id": "bd4cecdfba4e",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a83a5f08db85",
+          "pair_id": "0fd9cd971c74",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0e791b9b6c12",
+          "pair_id": "2b215c2311d0",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "00c31acf527f",
+          "pair_id": "471d970c05df",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "61d62b3c1154",
+          "pair_id": "20389ceca0d2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "dd811422f25f",
+          "pair_id": "1fac11eed186",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6ee29d2adc58",
+          "pair_id": "60442cfc98bf",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7fa1b93e40d2",
+          "pair_id": "2b215c2311d0",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "189037d7480b",
+          "pair_id": "f1a3adaf43e7",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7bb53b0f7642",
+          "pair_id": "6f3edc5befc9",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "72d7dde61863",
+          "pair_id": "0d7996e1dce0",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": false,
+          "grounded_correct": false,
+          "strict_correct": false
+        },
+        {
+          "id": "899b5d84216f",
+          "pair_id": "dfa02a55fdbf",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0de070e58577",
+          "pair_id": "60442cfc98bf",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "ccc00d3e68a8",
+          "pair_id": "1050ce494c56",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8d39ea29638c",
+          "pair_id": "649fc4aee29e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a90177d0515c",
+          "pair_id": "f66a0416f36d",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "bcea272ae12e",
+          "pair_id": "0cf7716e189e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0cc3f74a9f56",
+          "pair_id": "f1c371019942",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c7149dd425c0",
+          "pair_id": "0f56d94d344a",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "383d7938142f",
+          "pair_id": "f1c371019942",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a1dbdd77412a",
+          "pair_id": "c1dcb77e1abf",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f1b6600d693a",
+          "pair_id": "97c01eebb280",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6a30a1975fcb",
+          "pair_id": "f1a3adaf43e7",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2c43e6f8c3a7",
+          "pair_id": "4f6912e524b4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0921b18efc54",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3c25446d9f4e",
+          "pair_id": "12f1e981b123",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c16e805e28bf",
+          "pair_id": "f2e10bcb6d3f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "541a3fc54fd2",
+          "pair_id": "0d7996e1dce0",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3e265e17888a",
+          "pair_id": "5c2a86d40f21",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6ac168e8e3d8",
+          "pair_id": "1d959569e9a8",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "76cbe57daa01",
+          "pair_id": "1fac11eed186",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4d883c407ed7",
+          "pair_id": "46bc297d496b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0f2a47a23194",
+          "pair_id": "96bb19c0b861",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a638c74daf57",
+          "pair_id": "f2e10bcb6d3f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fcdfac6b73d0",
+          "pair_id": "ce797f5c389d",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c0053c8d71ed",
+          "pair_id": "5d9e775e6970",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "b29af8f4be60",
+          "pair_id": "01116e92b3d8",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "09e2fcb16930",
+          "pair_id": "b7c0ccfe370e",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "428b84c23969",
+          "pair_id": "2820b5d6e5a4",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "deeb662de07d",
+          "pair_id": "c1dcb77e1abf",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "07b7ba7e6e2e",
+          "pair_id": "9149c81afefb",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0d42f1708578",
+          "pair_id": "8d41c9a67072",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9e7014d6db83",
+          "pair_id": "00f50e8a59ab",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2bc8602e216e",
+          "pair_id": "fc834ab4eb2f",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "36629f27c597",
+          "pair_id": "ad368bbed442",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8824adaaac82",
+          "pair_id": "4973cb902774",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "79997399ae8a",
+          "pair_id": "53e9226003ec",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6815692e484e",
+          "pair_id": "46bc297d496b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f630f06f602c",
+          "pair_id": "67b8162cbd87",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "1660d41e936f",
+          "pair_id": "35f71c285e15",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "86572cd9b672",
+          "pair_id": "80d148194ead",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "18b773bb4e3c",
+          "pair_id": "17d443bcc252",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "07fb07b8b26f",
+          "pair_id": "5c2a86d40f21",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9e2ccae726c4",
+          "pair_id": "a1c46e5844ea",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8dc5e3962c22",
+          "pair_id": "80d148194ead",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d5ec2e9d84d8",
+          "pair_id": "0cf7716e189e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "448df2433812",
+          "pair_id": "ef1cbbef9216",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4438c4985f09",
+          "pair_id": "6e83131b269b",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2769cd783ec4",
+          "pair_id": "30cdde78f034",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c28a9d965895",
+          "pair_id": "2bd49a188f34",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "839154aa0901",
+          "pair_id": "ba6afa49b501",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "afd09bccbdd0",
+          "pair_id": "12f1e981b123",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "687b3deb77be",
+          "pair_id": "81f1172cdcea",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "69302e4b02db",
+          "pair_id": "9b52a7efd48f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "78764926e2f9",
+          "pair_id": "7a4f76074630",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8c879a46804c",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0ed10839b8b2",
+          "pair_id": "04dab0337f00",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5242a19289d5",
+          "pair_id": "ec112255fee7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a17b1a828a6c",
+          "pair_id": "ee3b6e539caa",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "ba4824aa05ce",
+          "pair_id": "39376018ae5b",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0bd753590edb",
+          "pair_id": "8f5d51ec7015",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2e2568f44c07",
+          "pair_id": "a1c46e5844ea",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "178f10acbaf9",
+          "pair_id": "baa99aee69c8",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9679cc2435a7",
+          "pair_id": "ee5e62feea58",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7a5cef9c2f19",
+          "pair_id": "649fc4aee29e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a81796cbbae3",
+          "pair_id": "6f3edc5befc9",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9abb2d3d5798",
+          "pair_id": "d96b6979ed4c",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "eccb07e99e1d",
+          "pair_id": "e93381feda48",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3707a6004da2",
+          "pair_id": "4a58517c7015",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "10b434599947",
+          "pair_id": "ec112255fee7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "33a7d1df46e8",
+          "pair_id": "3fc356184aa1",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "caaeaa1c0918",
+          "pair_id": "af25abedaced",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "43bbcd3a1877",
+          "pair_id": "48484c3379d3",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3163fad1f6b8",
+          "pair_id": "f66b488885c3",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "183ad0d64d6b",
+          "pair_id": "ff59f34d32f2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2de11c415f13",
+          "pair_id": "9b803034d5c7",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "94a7332f6cf2",
+          "pair_id": "ee5e62feea58",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3dcc068944b6",
+          "pair_id": "5d9e775e6970",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f07ded1184aa",
+          "pair_id": "53e9226003ec",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c4fbed49732e",
+          "pair_id": "e93381feda48",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6244548232da",
+          "pair_id": "c12a7f9e9f4e",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a539affebc96",
+          "pair_id": "6cf355716dbc",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a9de83eee7b1",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "26e75d8e5ab5",
+          "pair_id": "cdcabc6a5f9e",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8704dabe3638",
+          "pair_id": "f66a0416f36d",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "86ef98ed42e6",
+          "pair_id": "3ca8c35e5ca5",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a95ae333e472",
+          "pair_id": "ad368bbed442",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "925217698785",
+          "pair_id": "39347f64c210",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d9d1b3b51c02",
+          "pair_id": "f633404c1816",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0bac264ff853",
+          "pair_id": "b7c0ccfe370e",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "96d109456490",
+          "pair_id": "dd04df076267",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "09e5123a7577",
+          "pair_id": "15422c2012a5",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9082523a5da7",
+          "pair_id": "67b8162cbd87",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4f4c45500149",
+          "pair_id": "74221d49fc96",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7755e162f030",
+          "pair_id": "f633404c1816",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "17a7bd3e54ba",
+          "pair_id": "bd4cecdfba4e",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "06dbe8b2da33",
+          "pair_id": "46c5a1b1567e",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "b321a6097121",
+          "pair_id": "0f56d94d344a",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "dd032e5aefa1",
+          "pair_id": "4f6912e524b4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7e3565e785be",
+          "pair_id": "d137c4b7cd33",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "704ed2a4eeca",
+          "pair_id": "dd04df076267",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4bb996f062c4",
+          "pair_id": "ff59f34d32f2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c6a4f13805fb",
+          "pair_id": "b11a583e7614",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c0b80b8f6bb8",
+          "pair_id": "baa99aee69c8",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6e599a985150",
+          "pair_id": "fc834ab4eb2f",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f99bd894e31b",
+          "pair_id": "9b52a7efd48f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c3e4de6c7c00",
+          "pair_id": "2820b5d6e5a4",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8a8911160e84",
+          "pair_id": "01116e92b3d8",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "008e5fdacaa3",
+          "pair_id": "ca84cef0dfdd",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5f36ff7d2077",
+          "pair_id": "15422c2012a5",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6456e6822be6",
+          "pair_id": "d137c4b7cd33",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d3a5602eaf4f",
+          "pair_id": "f66b488885c3",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f21b15778659",
+          "pair_id": "4973cb902774",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7752a2b7ed5f",
+          "pair_id": "438b648931f9",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e5988e8fa7fa",
+          "pair_id": "74221d49fc96",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0949c6d40c16",
+          "pair_id": "30cdde78f034",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "cd2b6c6a38dc",
+          "pair_id": "7a4f76074630",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9514afe1a3f6",
+          "pair_id": "ee3b6e539caa",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c2aa9aba266f",
+          "pair_id": "5066f1efcdfb",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "deb73da2ea89",
+          "pair_id": "1d959569e9a8",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "58f50f9a4f81",
+          "pair_id": "3ca8c35e5ca5",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a216f48cc815",
+          "pair_id": "ba6afa49b501",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fcfd77ad8ea4",
+          "pair_id": "af25abedaced",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fbe5c7601806",
+          "pair_id": "ffee6b88242f",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9cc2a6b3a65a",
+          "pair_id": "6e83131b269b",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a31c26bbf4f9",
+          "pair_id": "88e9f1c1e491",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "1194f7abb839",
+          "pair_id": "3fc356184aa1",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "80d6d4b56183",
+          "pair_id": "8f5d51ec7015",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a4c130dfa30f",
+          "pair_id": "438b648931f9",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "93f250747ded",
+          "pair_id": "97c01eebb280",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9bc008a9f298",
+          "pair_id": "fa0a68b80ad7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "abd35f04561e",
+          "pair_id": "35f71c285e15",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "69f431cc48bb",
+          "pair_id": "471d970c05df",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7a0d26d4ad4b",
+          "pair_id": "ef1cbbef9216",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3f5b93e55443",
+          "pair_id": "dfa02a55fdbf",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2806c07c0241",
+          "pair_id": "0fd9cd971c74",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "39c48ab71813",
+          "pair_id": "04dab0337f00",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2d0e32fed188",
+          "pair_id": "1050ce494c56",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "08dc5737caa6",
+          "pair_id": "dbdfe373c85b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "81917b05632b",
+          "pair_id": "96bb19c0b861",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "b7f994b44b6b",
+          "pair_id": "88e9f1c1e491",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "ba711c8287b9",
+          "pair_id": "39376018ae5b",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "59fc3b40041d",
+          "pair_id": "6a47500f8de2",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d8f188a8d345",
+          "pair_id": "9b803034d5c7",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c5843505569b",
+          "pair_id": "e01dbb48bdda",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "96646ce72861",
+          "pair_id": "9149c81afefb",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0aab7bbdff95",
+          "pair_id": "8d41c9a67072",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "73728752f7ca",
+          "pair_id": "fa0a68b80ad7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4ef556836747",
+          "pair_id": "e01dbb48bdda",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "43f3e0b4c2b5",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c968ede0b6ca",
+          "pair_id": "81f1172cdcea",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "55f7b83c2bdf",
+          "pair_id": "00f50e8a59ab",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "237a1046dd2d",
+          "pair_id": "5066f1efcdfb",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "55b9c483e656",
+          "pair_id": "c12a7f9e9f4e",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "62632cbe9ebb",
+          "pair_id": "cdcabc6a5f9e",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    },
+    "two-stage-retrieval": {
+      "answer_correct": 180,
+      "grounded_correct": 180,
+      "strict_correct": 180,
+      "answer_pairs_correct": 90,
+      "strict_pairs_correct": 90,
+      "format_valid": 180,
+      "missing_evidence_correct": 30,
+      "missing_evidence_cases": 30,
+      "by_language": {
+        "en": {
+          "answer_correct": 60,
+          "grounded_correct": 60,
+          "strict_correct": 60
+        },
+        "de": {
+          "answer_correct": 60,
+          "grounded_correct": 60,
+          "strict_correct": 60
+        },
+        "es": {
+          "answer_correct": 60,
+          "grounded_correct": 60,
+          "strict_correct": 60
+        }
+      },
+      "cost": {
+        "requests": 360,
+        "output_tokens": 9877,
+        "input_tokens": 94146,
+        "median_seconds": 1.0063896998763084,
+        "total_seconds": 176.42431769985706,
+        "non_stop_requests": 0,
+        "max_output_tokens": 51
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "irrelevance_or_omission": []
+      },
+      "results": [
+        {
+          "id": "b61fc3e466d7",
+          "pair_id": "d96b6979ed4c",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "be2c37b00db6",
+          "pair_id": "6cf355716dbc",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5acbf7416437",
+          "pair_id": "dbdfe373c85b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3c5477979c56",
+          "pair_id": "b11a583e7614",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e1e29c29742a",
+          "pair_id": "6a47500f8de2",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "07a955f8277d",
+          "pair_id": "46c5a1b1567e",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "af9973096bc0",
+          "pair_id": "2bd49a188f34",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "1d26a656988a",
+          "pair_id": "ffee6b88242f",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "333903b9961e",
+          "pair_id": "17d443bcc252",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "95a0d9474fca",
+          "pair_id": "39347f64c210",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "005d69c2e657",
+          "pair_id": "48484c3379d3",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "300b0b177fdf",
+          "pair_id": "20389ceca0d2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2e4ecc26c4dd",
+          "pair_id": "4a58517c7015",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3d0926d42898",
+          "pair_id": "ca84cef0dfdd",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2f80801c2ee9",
+          "pair_id": "ce797f5c389d",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3649afdcbc62",
+          "pair_id": "bd4cecdfba4e",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a83a5f08db85",
+          "pair_id": "0fd9cd971c74",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0e791b9b6c12",
+          "pair_id": "2b215c2311d0",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "00c31acf527f",
+          "pair_id": "471d970c05df",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "61d62b3c1154",
+          "pair_id": "20389ceca0d2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "dd811422f25f",
+          "pair_id": "1fac11eed186",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6ee29d2adc58",
+          "pair_id": "60442cfc98bf",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7fa1b93e40d2",
+          "pair_id": "2b215c2311d0",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "189037d7480b",
+          "pair_id": "f1a3adaf43e7",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7bb53b0f7642",
+          "pair_id": "6f3edc5befc9",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "72d7dde61863",
+          "pair_id": "0d7996e1dce0",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "899b5d84216f",
+          "pair_id": "dfa02a55fdbf",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0de070e58577",
+          "pair_id": "60442cfc98bf",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "ccc00d3e68a8",
+          "pair_id": "1050ce494c56",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8d39ea29638c",
+          "pair_id": "649fc4aee29e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a90177d0515c",
+          "pair_id": "f66a0416f36d",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "bcea272ae12e",
+          "pair_id": "0cf7716e189e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0cc3f74a9f56",
+          "pair_id": "f1c371019942",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c7149dd425c0",
+          "pair_id": "0f56d94d344a",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "383d7938142f",
+          "pair_id": "f1c371019942",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a1dbdd77412a",
+          "pair_id": "c1dcb77e1abf",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f1b6600d693a",
+          "pair_id": "97c01eebb280",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6a30a1975fcb",
+          "pair_id": "f1a3adaf43e7",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2c43e6f8c3a7",
+          "pair_id": "4f6912e524b4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0921b18efc54",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3c25446d9f4e",
+          "pair_id": "12f1e981b123",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c16e805e28bf",
+          "pair_id": "f2e10bcb6d3f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "541a3fc54fd2",
+          "pair_id": "0d7996e1dce0",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3e265e17888a",
+          "pair_id": "5c2a86d40f21",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6ac168e8e3d8",
+          "pair_id": "1d959569e9a8",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "76cbe57daa01",
+          "pair_id": "1fac11eed186",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4d883c407ed7",
+          "pair_id": "46bc297d496b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0f2a47a23194",
+          "pair_id": "96bb19c0b861",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a638c74daf57",
+          "pair_id": "f2e10bcb6d3f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fcdfac6b73d0",
+          "pair_id": "ce797f5c389d",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c0053c8d71ed",
+          "pair_id": "5d9e775e6970",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "b29af8f4be60",
+          "pair_id": "01116e92b3d8",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "09e2fcb16930",
+          "pair_id": "b7c0ccfe370e",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "428b84c23969",
+          "pair_id": "2820b5d6e5a4",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "deeb662de07d",
+          "pair_id": "c1dcb77e1abf",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "07b7ba7e6e2e",
+          "pair_id": "9149c81afefb",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0d42f1708578",
+          "pair_id": "8d41c9a67072",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9e7014d6db83",
+          "pair_id": "00f50e8a59ab",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2bc8602e216e",
+          "pair_id": "fc834ab4eb2f",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "36629f27c597",
+          "pair_id": "ad368bbed442",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8824adaaac82",
+          "pair_id": "4973cb902774",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "79997399ae8a",
+          "pair_id": "53e9226003ec",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6815692e484e",
+          "pair_id": "46bc297d496b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f630f06f602c",
+          "pair_id": "67b8162cbd87",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "1660d41e936f",
+          "pair_id": "35f71c285e15",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "86572cd9b672",
+          "pair_id": "80d148194ead",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "18b773bb4e3c",
+          "pair_id": "17d443bcc252",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "07fb07b8b26f",
+          "pair_id": "5c2a86d40f21",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9e2ccae726c4",
+          "pair_id": "a1c46e5844ea",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8dc5e3962c22",
+          "pair_id": "80d148194ead",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d5ec2e9d84d8",
+          "pair_id": "0cf7716e189e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "448df2433812",
+          "pair_id": "ef1cbbef9216",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4438c4985f09",
+          "pair_id": "6e83131b269b",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2769cd783ec4",
+          "pair_id": "30cdde78f034",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c28a9d965895",
+          "pair_id": "2bd49a188f34",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "839154aa0901",
+          "pair_id": "ba6afa49b501",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "afd09bccbdd0",
+          "pair_id": "12f1e981b123",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "687b3deb77be",
+          "pair_id": "81f1172cdcea",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "69302e4b02db",
+          "pair_id": "9b52a7efd48f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "78764926e2f9",
+          "pair_id": "7a4f76074630",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8c879a46804c",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0ed10839b8b2",
+          "pair_id": "04dab0337f00",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5242a19289d5",
+          "pair_id": "ec112255fee7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a17b1a828a6c",
+          "pair_id": "ee3b6e539caa",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "ba4824aa05ce",
+          "pair_id": "39376018ae5b",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0bd753590edb",
+          "pair_id": "8f5d51ec7015",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2e2568f44c07",
+          "pair_id": "a1c46e5844ea",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "178f10acbaf9",
+          "pair_id": "baa99aee69c8",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9679cc2435a7",
+          "pair_id": "ee5e62feea58",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7a5cef9c2f19",
+          "pair_id": "649fc4aee29e",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a81796cbbae3",
+          "pair_id": "6f3edc5befc9",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9abb2d3d5798",
+          "pair_id": "d96b6979ed4c",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "eccb07e99e1d",
+          "pair_id": "e93381feda48",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3707a6004da2",
+          "pair_id": "4a58517c7015",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "10b434599947",
+          "pair_id": "ec112255fee7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "33a7d1df46e8",
+          "pair_id": "3fc356184aa1",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "caaeaa1c0918",
+          "pair_id": "af25abedaced",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "43bbcd3a1877",
+          "pair_id": "48484c3379d3",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3163fad1f6b8",
+          "pair_id": "f66b488885c3",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "183ad0d64d6b",
+          "pair_id": "ff59f34d32f2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2de11c415f13",
+          "pair_id": "9b803034d5c7",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "94a7332f6cf2",
+          "pair_id": "ee5e62feea58",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3dcc068944b6",
+          "pair_id": "5d9e775e6970",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f07ded1184aa",
+          "pair_id": "53e9226003ec",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c4fbed49732e",
+          "pair_id": "e93381feda48",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6244548232da",
+          "pair_id": "c12a7f9e9f4e",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a539affebc96",
+          "pair_id": "6cf355716dbc",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a9de83eee7b1",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "26e75d8e5ab5",
+          "pair_id": "cdcabc6a5f9e",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8704dabe3638",
+          "pair_id": "f66a0416f36d",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "86ef98ed42e6",
+          "pair_id": "3ca8c35e5ca5",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a95ae333e472",
+          "pair_id": "ad368bbed442",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "925217698785",
+          "pair_id": "39347f64c210",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d9d1b3b51c02",
+          "pair_id": "f633404c1816",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0bac264ff853",
+          "pair_id": "b7c0ccfe370e",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "96d109456490",
+          "pair_id": "dd04df076267",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "09e5123a7577",
+          "pair_id": "15422c2012a5",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9082523a5da7",
+          "pair_id": "67b8162cbd87",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4f4c45500149",
+          "pair_id": "74221d49fc96",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7755e162f030",
+          "pair_id": "f633404c1816",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "17a7bd3e54ba",
+          "pair_id": "bd4cecdfba4e",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "06dbe8b2da33",
+          "pair_id": "46c5a1b1567e",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "b321a6097121",
+          "pair_id": "0f56d94d344a",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "dd032e5aefa1",
+          "pair_id": "4f6912e524b4",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7e3565e785be",
+          "pair_id": "d137c4b7cd33",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "704ed2a4eeca",
+          "pair_id": "dd04df076267",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4bb996f062c4",
+          "pair_id": "ff59f34d32f2",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c6a4f13805fb",
+          "pair_id": "b11a583e7614",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c0b80b8f6bb8",
+          "pair_id": "baa99aee69c8",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6e599a985150",
+          "pair_id": "fc834ab4eb2f",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f99bd894e31b",
+          "pair_id": "9b52a7efd48f",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c3e4de6c7c00",
+          "pair_id": "2820b5d6e5a4",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8a8911160e84",
+          "pair_id": "01116e92b3d8",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "008e5fdacaa3",
+          "pair_id": "ca84cef0dfdd",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5f36ff7d2077",
+          "pair_id": "15422c2012a5",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "6456e6822be6",
+          "pair_id": "d137c4b7cd33",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d3a5602eaf4f",
+          "pair_id": "f66b488885c3",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "f21b15778659",
+          "pair_id": "4973cb902774",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7752a2b7ed5f",
+          "pair_id": "438b648931f9",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e5988e8fa7fa",
+          "pair_id": "74221d49fc96",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0949c6d40c16",
+          "pair_id": "30cdde78f034",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "cd2b6c6a38dc",
+          "pair_id": "7a4f76074630",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9514afe1a3f6",
+          "pair_id": "ee3b6e539caa",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c2aa9aba266f",
+          "pair_id": "5066f1efcdfb",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "deb73da2ea89",
+          "pair_id": "1d959569e9a8",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "58f50f9a4f81",
+          "pair_id": "3ca8c35e5ca5",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a216f48cc815",
+          "pair_id": "ba6afa49b501",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fcfd77ad8ea4",
+          "pair_id": "af25abedaced",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "fbe5c7601806",
+          "pair_id": "ffee6b88242f",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9cc2a6b3a65a",
+          "pair_id": "6e83131b269b",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a31c26bbf4f9",
+          "pair_id": "88e9f1c1e491",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "1194f7abb839",
+          "pair_id": "3fc356184aa1",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "80d6d4b56183",
+          "pair_id": "8f5d51ec7015",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a4c130dfa30f",
+          "pair_id": "438b648931f9",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "93f250747ded",
+          "pair_id": "97c01eebb280",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "9bc008a9f298",
+          "pair_id": "fa0a68b80ad7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "abd35f04561e",
+          "pair_id": "35f71c285e15",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "69f431cc48bb",
+          "pair_id": "471d970c05df",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7a0d26d4ad4b",
+          "pair_id": "ef1cbbef9216",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "3f5b93e55443",
+          "pair_id": "dfa02a55fdbf",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2806c07c0241",
+          "pair_id": "0fd9cd971c74",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "39c48ab71813",
+          "pair_id": "04dab0337f00",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2d0e32fed188",
+          "pair_id": "1050ce494c56",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "08dc5737caa6",
+          "pair_id": "dbdfe373c85b",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "81917b05632b",
+          "pair_id": "96bb19c0b861",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "b7f994b44b6b",
+          "pair_id": "88e9f1c1e491",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "ba711c8287b9",
+          "pair_id": "39376018ae5b",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "59fc3b40041d",
+          "pair_id": "6a47500f8de2",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "d8f188a8d345",
+          "pair_id": "9b803034d5c7",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c5843505569b",
+          "pair_id": "e01dbb48bdda",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "96646ce72861",
+          "pair_id": "9149c81afefb",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "0aab7bbdff95",
+          "pair_id": "8d41c9a67072",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "73728752f7ca",
+          "pair_id": "fa0a68b80ad7",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "4ef556836747",
+          "pair_id": "e01dbb48bdda",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "43f3e0b4c2b5",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c968ede0b6ca",
+          "pair_id": "81f1172cdcea",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "55f7b83c2bdf",
+          "pair_id": "00f50e8a59ab",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "237a1046dd2d",
+          "pair_id": "5066f1efcdfb",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "55b9c483e656",
+          "pair_id": "c12a7f9e9f4e",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "62632cbe9ebb",
+          "pair_id": "cdcabc6a5f9e",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "answer_correct": {
+      "fixed_ids": [
+        "333903b9961e",
+        "72d7dde61863"
+      ],
+      "regressed_ids": [],
+      "pair_fixed_ids": [
+        "17d443bcc252",
+        "0d7996e1dce0"
+      ],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 0.5
+    },
+    "grounded_correct": {
+      "fixed_ids": [
+        "333903b9961e",
+        "72d7dde61863"
+      ],
+      "regressed_ids": [],
+      "pair_fixed_ids": [
+        "17d443bcc252",
+        "0d7996e1dce0"
+      ],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 0.5
+    },
+    "strict_correct": {
+      "fixed_ids": [
+        "333903b9961e",
+        "72d7dde61863"
+      ],
+      "regressed_ids": [],
+      "pair_fixed_ids": [
+        "17d443bcc252",
+        "0d7996e1dce0"
+      ],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 0.5
+    }
+  },
+  "audit": {
+    "independent_gold": 180,
+    "raw_calls_and_hashes": 719,
+    "balanced_order": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "models": {
+    "llama": {
+      "name": "llama3.1:8b",
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 131072,
+        "embedding_length": 4096
+      }
+    },
+    "qwen": {
+      "name": "qwen3.5:9b",
+      "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      }
+    }
+  },
+  "ollama": "0.35.0",
+  "frozen_utc": "2026-10-15T14:33:15.470231+00:00",
+  "phase": "holdout",
+  "seed": 1208,
+  "groups": 10,
+  "cases": 180,
+  "languages": [
+    "en",
+    "de",
+    "es"
+  ],
+  "options": {
+    "temperature": 0,
+    "seed": 20261015,
+    "num_ctx": 4096,
+    "num_predict": 512
+  },
+  "think": false,
+  "api_fees_eur": 0,
+  "implementation_commit": "6add9edc84e0376cf97ce73fa34ae7efd1721ae6",
+  "sources_sha256": {
+    "candidate.py": "5a7b1bb156f73f034e622e2924369e4866896425455e499042d02ebfa3c92d6b",
+    "experiment.py": "09b3078125d0cffbd479ea689c8d08161df0abe3f4150916e1ce312aeab5ebad",
+    "analyze.py": "9387e950c63a5dac0ff27844fc3bd60430d4c05efcf92cedb1b665b259361171",
+    "generate.py": "b809293089b22cf198f7f4488bbfac3d67303a05669aded362b8866cb340cef1",
+    "workflow.py": "541954a60a9d178da658d4eb9ee7934df0e3e0cf743863b031586299534a44ae",
+    "selection.py": "141c1505679890b37f38d6e9ad921c2d0dfedcb3634dbedcd247d0de730e3af4",
+    "score.py": "298f09899bef0739e833816c719d14bf36d47938f6e0626afab8659e88b6baa1"
+  },
+  "prompt_hash": "bcb37dd8ae11f95d379c1ec019f87f6ec862205967ca8f86d1811799f820937f",
+  "strategies": [
+    "two-stage-ids",
+    "two-stage-retrieval"
+  ],
+  "model_order": [
+    "qwen",
+    "llama"
+  ],
+  "order": "Alternate baseline/candidate and candidate/baseline on successive cases; fresh conversations. Same cases for both models.",
+  "primary_metric": "Exact answer value, ignoring citation shape and extra JSON keys. Require parseable JSON object with answer of correct type; no answer repair. Compare both-correct pairs; exact two-sided McNemar, Holm over two models.",
+  "secondary": "Grounded content: exact answer and expected citation IDs, accepting string IDs or singleton source_id objects; strict JSON score and missing-evidence errors reported separately.",
+  "gate": "Adopt as optional only if answer-value, grounded-content, and strict correct counts and answer-pair counts do not fall on either model, with at least one model improving answer-value count. Report each individual regression. No holdout tuning.",
+  "workflow": "Model extracts entity and field from question only. Code executes exact equality retrieval using that model query, keeping all matching records and original order. Model chooses revision and final answer. Same final schema as baseline. No answer keys and no code-based ranking or final-answer substitution.",
+  "rules": "No gold or pair metadata in requests, no retries, no output repair. Truncation is failure. Development excluded from holdout. Fixed settings do not guarantee bitwise determinism.",
+  "limitations": "Same synthetic templates, one quantization per model, one machine; two calls per condition. The exact retriever implements the structured task matching rule; gains belong to the hybrid workflow, not intrinsic model intelligence. No general intelligence or training claim."
+}

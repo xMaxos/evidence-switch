@@ -148,6 +148,36 @@ class OllamaTests(unittest.TestCase):
         self.assertEqual(read_jsonl(self.output)[0]["response"], {"error": "invalid_extraction"})
         self.assertFalse(read_jsonl(self.trace)[0]["extraction_valid"])
 
+    def test_retrieval_runs_model_query_then_answer_without_substituting_value(self):
+        from evidenceswitch.retrieval import prepare_retrieval
+        query = '{"entity":"unknown","field":"signal_code"}'
+        # Deliberately incorrect: the runner must save the model answer unchanged.
+        answer = '{"answer":"V-unverified","citations":[]}'
+        prepared = prepare_retrieval(self.prompt["messages"])
+        for native in (True, False):
+            with self.subTest(native=native):
+                output = self.directory / f"retrieval-{native}.jsonl"
+                server = native_endpoint if native else endpoint
+                response = native_completion if native else completion
+                with server([response(query), response(answer)]) as (url, requests):
+                    run = run_ollama if native else run_prompts
+                    self.assertEqual(run(self.prompts, output, base_url=url, model="test-model",
+                                         strategy="two-stage-retrieval"), 1)
+                chats = requests[3:] if native else requests
+                self.assertEqual([r["body"]["messages"] for r in chats],
+                                 [prepared.extraction_messages, prepared.finish(query)])
+                self.assertTrue(chats[1]["body"]["messages"][1]["content"].endswith("[]"))
+                self.assertEqual(read_jsonl(output)[0]["response"], answer)
+
+    def test_invalid_retrieval_query_stops_before_answer(self):
+        responses = [{"models": [{"name": "test-model"}]}, {}, {"version": "test"},
+                     native_completion('{"entity":"missing-field"}')]
+        with patch("evidenceswitch.ollama._request", side_effect=responses) as request:
+            self.assertEqual(self.run_native(strategy="two-stage-retrieval", trace_path=self.trace), 1)
+        self.assertEqual(request.call_count, 4)
+        self.assertEqual(read_jsonl(self.output)[0]["response"], {"error": "invalid_extraction"})
+        self.assertFalse(read_jsonl(self.trace)[0]["extraction_valid"])
+
     def test_missing_and_cloud_models_fail_before_chat_or_output(self):
         for responses in ([{"models": []}],
                           [{"models": [{"name": "test-model"}]}, {"remote_host": "https://cloud.example"}],
