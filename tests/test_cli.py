@@ -67,7 +67,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(compatible.call_args.kwargs["trace_path"], "trace.jsonl")
 
     def test_selection_and_retrieval_are_available_for_both_transports(self):
-        for strategy in ("two-stage-ids", "two-stage-retrieval"):
+        for strategy in ("two-stage-ids", "two-stage-retrieval", "two-stage-latest"):
             for command, target in (("run", "evidenceswitch.runner.run_prompts"),
                                     ("run-ollama", "evidenceswitch.ollama.run_ollama")):
                 with self.subTest(command=command, strategy=strategy), patch(target, return_value=1) as run:

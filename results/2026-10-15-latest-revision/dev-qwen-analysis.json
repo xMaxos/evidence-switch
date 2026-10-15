@@ -1,0 +1,446 @@
+{
+  "phase": "dev",
+  "model": "qwen",
+  "cases": 18,
+  "pairs": 9,
+  "strategies": {
+    "two-stage-retrieval": {
+      "answer_correct": 18,
+      "grounded_correct": 18,
+      "strict_correct": 18,
+      "answer_pairs_correct": 9,
+      "strict_pairs_correct": 9,
+      "format_valid": 18,
+      "missing_evidence_correct": 3,
+      "missing_evidence_cases": 3,
+      "by_language": {
+        "en": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        },
+        "de": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        },
+        "es": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        }
+      },
+      "cost": {
+        "requests": 36,
+        "output_tokens": 995,
+        "input_tokens": 9365,
+        "median_seconds": 1.0269869999028742,
+        "total_seconds": 17.96648099971935,
+        "non_stop_requests": 0,
+        "max_output_tokens": 48
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "selection_policy": "all exact matches",
+        "selection_issues": []
+      },
+      "results": [
+        {
+          "id": "b6ad5a109a06",
+          "pair_id": "78b6eadebe23",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "45273c90fd2e",
+          "pair_id": "21a2c01c9b93",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7270aa53e0e5",
+          "pair_id": "d4b0cab1b8f7",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a54e871b29cb",
+          "pair_id": "78b6eadebe23",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "602f608399a7",
+          "pair_id": "f36228e6e84e",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8932f27f5454",
+          "pair_id": "2cc0f9201da7",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a962a4b44583",
+          "pair_id": "2cc0f9201da7",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c3cd42b80bc7",
+          "pair_id": "c7d20030dc38",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "cdb5afa2c90b",
+          "pair_id": "21a2c01c9b93",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2857c216a266",
+          "pair_id": "d4b0cab1b8f7",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "63239c611bfc",
+          "pair_id": "05aab3501a4f",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e0d5bdf24ec5",
+          "pair_id": "c7d20030dc38",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e6e29a0f527f",
+          "pair_id": "f36228e6e84e",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7ce2fd5b52d6",
+          "pair_id": "5df8f40ffb0f",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5413c4f80e0a",
+          "pair_id": "4b65041814b0",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "77b8e64b3049",
+          "pair_id": "05aab3501a4f",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "23060c08abd0",
+          "pair_id": "5df8f40ffb0f",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "025d5bb1e23b",
+          "pair_id": "4b65041814b0",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    },
+    "two-stage-latest": {
+      "answer_correct": 18,
+      "grounded_correct": 18,
+      "strict_correct": 18,
+      "answer_pairs_correct": 9,
+      "strict_pairs_correct": 9,
+      "format_valid": 18,
+      "missing_evidence_correct": 3,
+      "missing_evidence_cases": 3,
+      "by_language": {
+        "en": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        },
+        "de": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        },
+        "es": {
+          "answer_correct": 6,
+          "grounded_correct": 6,
+          "strict_correct": 6
+        }
+      },
+      "cost": {
+        "requests": 36,
+        "output_tokens": 1011,
+        "input_tokens": 8094,
+        "median_seconds": 1.0073604499921203,
+        "total_seconds": 17.682587699731812,
+        "non_stop_requests": 0,
+        "max_output_tokens": 48
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "selection_policy": "unique highest revision",
+        "selection_issues": []
+      },
+      "results": [
+        {
+          "id": "b6ad5a109a06",
+          "pair_id": "78b6eadebe23",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "45273c90fd2e",
+          "pair_id": "21a2c01c9b93",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7270aa53e0e5",
+          "pair_id": "d4b0cab1b8f7",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a54e871b29cb",
+          "pair_id": "78b6eadebe23",
+          "language": "en",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "602f608399a7",
+          "pair_id": "f36228e6e84e",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8932f27f5454",
+          "pair_id": "2cc0f9201da7",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a962a4b44583",
+          "pair_id": "2cc0f9201da7",
+          "language": "de",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "c3cd42b80bc7",
+          "pair_id": "c7d20030dc38",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "cdb5afa2c90b",
+          "pair_id": "21a2c01c9b93",
+          "language": "es",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "2857c216a266",
+          "pair_id": "d4b0cab1b8f7",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "63239c611bfc",
+          "pair_id": "05aab3501a4f",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e0d5bdf24ec5",
+          "pair_id": "c7d20030dc38",
+          "language": "de",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "e6e29a0f527f",
+          "pair_id": "f36228e6e84e",
+          "language": "es",
+          "task": "update",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "7ce2fd5b52d6",
+          "pair_id": "5df8f40ffb0f",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "5413c4f80e0a",
+          "pair_id": "4b65041814b0",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "77b8e64b3049",
+          "pair_id": "05aab3501a4f",
+          "language": "en",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "23060c08abd0",
+          "pair_id": "5df8f40ffb0f",
+          "language": "en",
+          "task": "missing",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "025d5bb1e23b",
+          "pair_id": "4b65041814b0",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "answer_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 1.0
+    },
+    "grounded_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 1.0
+    },
+    "strict_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 1.0
+    }
+  },
+  "audit": {
+    "independent_gold": 18,
+    "raw_calls_and_hashes": 72,
+    "balanced_order": true
+  }
+}

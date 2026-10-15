@@ -142,8 +142,8 @@ def _prepare_run(prompts_path, output_path, model, limit, timeout, strategy, tra
         raise ValueError("Limit must be a positive integer")
     if isinstance(timeout, bool) or not isinstance(timeout, (int, float)) or not math.isfinite(timeout) or timeout <= 0:
         raise ValueError("Timeout must be a positive finite number")
-    if strategy not in ("direct", "two-stage", "two-stage-ids", "two-stage-retrieval"):
-        raise ValueError("Strategy must be direct, two-stage, two-stage-ids or two-stage-retrieval")
+    if strategy not in ("direct", "two-stage", "two-stage-ids", "two-stage-retrieval", "two-stage-latest"):
+        raise ValueError("Strategy must be direct, two-stage, two-stage-ids, two-stage-retrieval or two-stage-latest")
     paths = [Path(prompts_path), Path(output_path)]
     if trace_path is not None:
         paths.append(Path(trace_path))
@@ -152,12 +152,14 @@ def _prepare_run(prompts_path, output_path, model, limit, timeout, strategy, tra
     if any(path.exists() for path in paths[1:]):
         raise FileExistsError("Prediction or trace output already exists")
     prompts = _read_prompts(paths[0])
-    if strategy in ("two-stage", "two-stage-ids", "two-stage-retrieval"):
+    if strategy in ("two-stage", "two-stage-ids", "two-stage-retrieval", "two-stage-latest"):
         from .workflow import prepare
         if strategy == "two-stage-ids":
             from .selection import prepare_ids as prepare
         elif strategy == "two-stage-retrieval":
             from .retrieval import prepare_retrieval as prepare
+        elif strategy == "two-stage-latest":
+            from .latest import prepare_latest as prepare
         # Validate every template before requests, including entries beyond limit.
         prepared = [prepare(prompt["messages"]) for prompt in prompts]
     else:

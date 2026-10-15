@@ -178,6 +178,27 @@ class OllamaTests(unittest.TestCase):
         self.assertEqual(read_jsonl(self.output)[0]["response"], {"error": "invalid_extraction"})
         self.assertFalse(read_jsonl(self.trace)[0]["extraction_valid"])
 
+    def test_latest_strategy_sends_one_source_and_keeps_the_model_answer(self):
+        from evidenceswitch.latest import prepare_latest
+        query = json.dumps({key:self.records[0][key] for key in ("entity", "field")})
+        answer = '{"answer":"deliberately-wrong","citations":[]}'
+        prepared = prepare_latest(self.prompt["messages"])
+        for native in (True, False):
+            with self.subTest(native=native):
+                output = self.directory / f"latest-{native}.jsonl"
+                server = native_endpoint if native else endpoint
+                response = native_completion if native else completion
+                with server([response(query), response(answer)]) as (url, requests):
+                    run = run_ollama if native else run_prompts
+                    self.assertEqual(run(self.prompts, output, base_url=url, model="test-model",
+                                         strategy="two-stage-latest"), 1)
+                chats = requests[3:] if native else requests
+                self.assertEqual([row["body"]["messages"] for row in chats],
+                                 [prepared.extraction_messages, prepared.finish(query)])
+                records = json.loads(chats[1]["body"]["messages"][1]["content"].split("\n\nRecords:\n")[1])
+                self.assertEqual(len(records), 1)
+                self.assertEqual(read_jsonl(output)[0]["response"], answer)
+
     def test_missing_and_cloud_models_fail_before_chat_or_output(self):
         for responses in ([{"models": []}],
                           [{"models": [{"name": "test-model"}]}, {"remote_host": "https://cloud.example"}],

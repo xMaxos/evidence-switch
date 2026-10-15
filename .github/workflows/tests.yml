@@ -16,8 +16,6 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m unittest discover -s tests -v
       - run: python -m evidenceswitch demo --out demo
-      - run: python results/2026-10-15-qwen35-two-stage/verify.py
-      - run: python results/2026-10-15-llama31/verify.py
-      - run: python results/2026-10-15-exact-retrieval/verify.py
+      - run: python scripts/verify_results.py
       - run: python -m pip install --no-deps .
       - run: evidenceswitch --help

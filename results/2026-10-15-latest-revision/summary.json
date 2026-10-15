@@ -1,0 +1,28 @@
+{
+  "cases_per_model": 180,
+  "model_count": 2,
+  "api_fees_eur": 0,
+  "answer_pair_holm_adjusted_p": {
+    "llama": 1.0,
+    "qwen": 1.0
+  },
+  "integration_gate": {
+    "per_model_nondecrease": {
+      "llama": {
+        "answer_correct": true,
+        "grounded_correct": true,
+        "strict_correct": true,
+        "answer_pairs_correct": true
+      },
+      "qwen": {
+        "answer_correct": true,
+        "grounded_correct": true,
+        "strict_correct": true,
+        "answer_pairs_correct": true
+      }
+    },
+    "at_least_one_fresh_answer_gain": true,
+    "both_known_llama_errors_fixed": true,
+    "passes": true
+  }
+}

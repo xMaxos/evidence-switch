@@ -1,0 +1,83 @@
+{
+  "models": {
+    "llama": {
+      "name": "llama3.1:8b",
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 131072,
+        "embedding_length": 4096
+      }
+    },
+    "qwen": {
+      "name": "qwen3.5:9b",
+      "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      }
+    }
+  },
+  "ollama": "0.35.0",
+  "frozen_utc": "2026-10-15T14:55:34.733187+00:00",
+  "phase": "regression",
+  "seed": null,
+  "groups": 0,
+  "cases": 4,
+  "languages": [
+    "en",
+    "de",
+    "es"
+  ],
+  "options": {
+    "temperature": 0,
+    "seed": 20261015,
+    "num_ctx": 4096,
+    "num_predict": 512
+  },
+  "think": false,
+  "api_fees_eur": 0,
+  "implementation_commit": "def97f6f7bf71d20f872ad43a3929aec3a413428",
+  "sources_sha256": {
+    "candidate.py": "37e6003b39a11812a6052079cf9620a239395ed10e7a8a86a7ec8a3c17646aee",
+    "experiment.py": "0476ebc54bc1ede5b112f9d85a9a7e75c8ca2e87a61b9b97d47dfa8b4bdb176e",
+    "analyze.py": "44f3a3ded5ea50c2764daa65d36a695b1f5adf5a94f88001219488409d1c9eb9",
+    "caseset.py": "2e6cf0fa1f7c4ce8287120986a716a0c40644a50502ceddde3ffde29aa34fdc9",
+    "generate.py": "b809293089b22cf198f7f4488bbfac3d67303a05669aded362b8866cb340cef1",
+    "workflow.py": "541954a60a9d178da658d4eb9ee7934df0e3e0cf743863b031586299534a44ae",
+    "selection.py": "141c1505679890b37f38d6e9ad921c2d0dfedcb3634dbedcd247d0de730e3af4",
+    "retrieval.py": "26a00a5c56be96492e1af5511683008446996f69205b05883d863d473431bf64",
+    "score.py": "298f09899bef0739e833816c719d14bf36d47938f6e0626afab8659e88b6baa1"
+  },
+  "prompt_hash": "e430fa0f846470c53b23750866c4e6ccfbf84f67944e15e5556ea88afeb05f14",
+  "strategies": [
+    "two-stage-retrieval",
+    "two-stage-latest"
+  ],
+  "model_order": [
+    "llama",
+    "qwen"
+  ],
+  "order": "Alternate baseline/candidate and candidate/baseline on successive cases; fresh conversations. Same cases for both models.",
+  "primary_metric": "Exact answer value, ignoring citation shape and extra JSON keys. Require parseable JSON object with answer of correct type; no answer repair. Compare both-correct pairs; exact two-sided McNemar, Holm over two models.",
+  "secondary": "Grounded content: exact answer and expected citation IDs, accepting string IDs or singleton source_id objects; strict JSON score and missing-evidence errors reported separately.",
+  "gate": "Adopt as optional only if both known Llama failures are correct in the regression run and holdout answer-value, grounded-content, strict and answer-pair counts do not fall on either model. Disclose individual regressions and whether fresh accuracy improved or merely stayed unchanged. No holdout tuning.",
+  "workflow": "Same model-generated query and final schema as v0.4. Code matches entity/field exactly and selects the unique highest INTEGER revision. Tied maxima fail. The model still copies the value and cites the source; no final-answer substitution or gold inputs. The tool now implements BOTH matching and revision-selection rules.",
+  "rules": "No gold or pair metadata in requests, no retries, no output repair. Truncation is failure. Development excluded from holdout. Fixed settings do not guarantee bitwise determinism.",
+  "limitations": "Same synthetic templates, one quantization per model, one machine; two calls per condition. The tool implements both matching and numeric revision selection. This benchmark mostly measures model query extraction and value/citation copying after tool use, not independent model reasoning. Known failures are reused regression fixtures, excluded from new-case results. No general intelligence or training claim."
+}

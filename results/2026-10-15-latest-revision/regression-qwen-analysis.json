@@ -1,0 +1,194 @@
+{
+  "phase": "regression",
+  "model": "qwen",
+  "cases": 4,
+  "pairs": 2,
+  "strategies": {
+    "two-stage-retrieval": {
+      "answer_correct": 4,
+      "grounded_correct": 4,
+      "strict_correct": 4,
+      "answer_pairs_correct": 2,
+      "strict_pairs_correct": 2,
+      "format_valid": 4,
+      "missing_evidence_correct": 0,
+      "missing_evidence_cases": 0,
+      "by_language": {
+        "en": {
+          "answer_correct": 0,
+          "grounded_correct": 0,
+          "strict_correct": 0
+        },
+        "de": {
+          "answer_correct": 2,
+          "grounded_correct": 2,
+          "strict_correct": 2
+        },
+        "es": {
+          "answer_correct": 2,
+          "grounded_correct": 2,
+          "strict_correct": 2
+        }
+      },
+      "cost": {
+        "requests": 8,
+        "output_tokens": 232,
+        "input_tokens": 2340,
+        "median_seconds": 1.0437838999787346,
+        "total_seconds": 11.422499799868092,
+        "non_stop_requests": 0,
+        "max_output_tokens": 32
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "selection_policy": "all exact matches",
+        "selection_issues": []
+      },
+      "results": [
+        {
+          "id": "0921b18efc54",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8c879a46804c",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a9de83eee7b1",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "43f3e0b4c2b5",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    },
+    "two-stage-latest": {
+      "answer_correct": 4,
+      "grounded_correct": 4,
+      "strict_correct": 4,
+      "answer_pairs_correct": 2,
+      "strict_pairs_correct": 2,
+      "format_valid": 4,
+      "missing_evidence_correct": 0,
+      "missing_evidence_cases": 0,
+      "by_language": {
+        "en": {
+          "answer_correct": 0,
+          "grounded_correct": 0,
+          "strict_correct": 0
+        },
+        "de": {
+          "answer_correct": 2,
+          "grounded_correct": 2,
+          "strict_correct": 2
+        },
+        "es": {
+          "answer_correct": 2,
+          "grounded_correct": 2,
+          "strict_correct": 2
+        }
+      },
+      "cost": {
+        "requests": 8,
+        "output_tokens": 232,
+        "input_tokens": 1992,
+        "median_seconds": 1.0269932999508455,
+        "total_seconds": 4.100912799825892,
+        "non_stop_requests": 0,
+        "max_output_tokens": 32
+      },
+      "extraction": {
+        "invalid_ids": [],
+        "selection_policy": "unique highest revision",
+        "selection_issues": []
+      },
+      "results": [
+        {
+          "id": "0921b18efc54",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "8c879a46804c",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "a9de83eee7b1",
+          "pair_id": "f25183a827a3",
+          "language": "de",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        },
+        {
+          "id": "43f3e0b4c2b5",
+          "pair_id": "c1208c32b10b",
+          "language": "es",
+          "task": "distractor",
+          "answer_correct": true,
+          "grounded_correct": true,
+          "strict_correct": true
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "answer_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 1.0
+    },
+    "grounded_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 1.0
+    },
+    "strict_correct": {
+      "fixed_ids": [],
+      "regressed_ids": [],
+      "pair_fixed_ids": [],
+      "pair_regressed_ids": [],
+      "pair_exact_mcnemar_p": 1.0
+    }
+  },
+  "audit": {
+    "independent_gold": 4,
+    "raw_calls_and_hashes": 16,
+    "balanced_order": true
+  }
+}
